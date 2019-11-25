@@ -16,6 +16,7 @@ public class poserObjetSurCorps : MonoBehaviour
     public GameObject[] ObjetCreer = new GameObject[6];
 
     GameObject choosenOne;
+    private int IndexChoosenOne;
 
     Color randomColor;
 
@@ -25,7 +26,6 @@ public class poserObjetSurCorps : MonoBehaviour
     {
         listePointAttache = GameObject.FindGameObjectsWithTag(tagPointAttache);
         randomColor = Random.ColorHSV();
-        //pointPris = new Vector3[ObjetCreer.Length];
         choosenOne = MembrePossible[0];
         ObjetCreer = new GameObject[6];
     }
@@ -37,17 +37,20 @@ public class poserObjetSurCorps : MonoBehaviour
         TestSiDoubleGameObject(ObjetCreer);
 
         //Choix du membre
+
         switch (lastKeyCode)
         {
             case KeyCode.Keypad0:
-                choosenOne = MembrePossible[0];
+                IndexChoosenOne = 0;
                 break;
             case KeyCode.Keypad1:
-                choosenOne = MembrePossible[1];
+                IndexChoosenOne = 1;
                 break;
             default:
                 break;
         }
+        choosenOne = MembrePossible[IndexChoosenOne];
+
         //Debug.Log(choosenOne.name); //fonctionne
 
         //Ajout d'un membre ou suppression d'un membre
@@ -103,7 +106,7 @@ public class poserObjetSurCorps : MonoBehaviour
                     
 
                 }
-                if (hit.collider.tag == "membre")
+                else if (hit.collider.tag == "membre")
                 {
                     //Debug.Log("j'atteint ?");
                     for (int i = 0; i < ObjetCreer.Length; i++)

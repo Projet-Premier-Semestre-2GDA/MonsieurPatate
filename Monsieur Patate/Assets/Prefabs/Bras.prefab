@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 6649416710172586862}
   - component: {fileID: 7647837928409059390}
   - component: {fileID: -2212454892979949262}
+  - component: {fileID: -1539831405449408519}
   m_Layer: 9
   m_Name: Bras
   m_TagString: membre
@@ -136,6 +137,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bb92ee772027543bf3c81e450b40ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  membreControlee: {fileID: 6438964940339809398, guid: 26163d9667ae5f54e995a76fc265e35a,
-    type: 3}
+  membreControlee: {fileID: -1539831405449408519}
   numeroMembre: -1
+--- !u!114 &-1539831405449408519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047647253683621919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6262bffbc36d148be558c2a710ab48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
+  directionForce: {x: 0, y: 0, z: 0}
+  vitesseDeRotation: 200

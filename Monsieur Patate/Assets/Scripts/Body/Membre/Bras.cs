@@ -11,21 +11,19 @@ public class Bras : Membre
     }
 
 
-    public override void FirstAction(Transform secondTransform, Rigidbody secondRb)
+    public override void FirstAction()
     {
-        base.FirstAction(secondTransform, secondRb);
-        secondTransform.Rotate(Vector3.right, vitesseDeRotation * Time.deltaTime);
+        base.FirstAction();
     }
-    public override void SecondAction(Transform secondTransform, Rigidbody secondRb)
+    public override void SecondAction()
     {
-        base.SecondAction(secondTransform, secondRb);
-        secondTransform.Rotate(Vector3.right, -vitesseDeRotation * Time.deltaTime);
+        base.SecondAction();
 
     }
-    public override void ThirdAction(Transform secondTransform, Rigidbody secondRb)
+    public override void ThirdAction()
     {
-        base.ThirdAction(secondTransform, secondRb);
-        directionForce = secondTransform.up;
-        secondRb.AddForce(directionForce * 10);
+        
+        directionForce = transform.up;
+        rb.AddForce(directionForce * 10);
     }
 }

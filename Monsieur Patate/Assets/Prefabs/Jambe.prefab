@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5346473932635713447}
   - component: {fileID: 5346473932635713440}
   - component: {fileID: -3043509697269034534}
+  - component: {fileID: -3111069764480306219}
   m_Layer: 9
   m_Name: Jambe
   m_TagString: membre
@@ -58,9 +59,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bb92ee772027543bf3c81e450b40ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  membreControlee: {fileID: 1351371591395840699, guid: 5304c337a5c720d4097aea4fece5dbc3,
-    type: 3}
+  membreControlee: {fileID: -3111069764480306219}
   numeroMembre: -1
+--- !u!114 &-3111069764480306219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346473932635713441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9d837f34df2024794758c4327ca67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
+  directionForce: {x: 0, y: 0, z: 0}
+  vitesseDeRotation: 200
 --- !u!1 &5346473933537403294
 GameObject:
   m_ObjectHideFlags: 0

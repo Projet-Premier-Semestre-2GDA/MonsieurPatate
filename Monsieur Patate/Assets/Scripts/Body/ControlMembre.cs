@@ -30,17 +30,17 @@ public class ControlMembre : MonoBehaviour
 
         if (Input.GetKey(KeyFirstAction))
         {
-            membreControlee.FirstAction(transform, rb);
+            membreControlee.FirstAction();
             Debug.Log("l'objet numero " + numeroMembre + " effectue la première action");
         }
         if (Input.GetKey(KeySecondAction))
         {
-            membreControlee.SecondAction(transform, rb);
+            membreControlee.SecondAction();
             Debug.Log("l'objet numero " + numeroMembre + " effectue la deuxième action");
         }
         if (Input.GetKey(KeyThirdAction))
         {
-            membreControlee.ThirdAction(transform, rb);
+            membreControlee.ThirdAction();
             Debug.Log("l'objet numero " + numeroMembre + " effectue la troisième action");
         }
     }

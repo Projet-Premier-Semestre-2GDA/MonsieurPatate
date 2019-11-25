@@ -622,6 +622,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa7f004f204e7594ab396c8f35196e63, type: 3}
+--- !u!1 &493588104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6103995132178259727, guid: 5304c337a5c720d4097aea4fece5dbc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6103995130196196579}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493588106}
+  - component: {fileID: 493588105}
+  m_Layer: 0
+  m_Name: JambeScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &493588105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1351371591395840699, guid: 5304c337a5c720d4097aea4fece5dbc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6103995130196196579}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493588104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9d837f34df2024794758c4327ca67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  directionForce: {x: 0, y: 0, z: 0}
+  vitesseDeRotation: 200
+--- !u!4 &493588106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6103995132178259726, guid: 5304c337a5c720d4097aea4fece5dbc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6103995130196196579}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493588104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623141168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,11 +1277,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_TiltMin
-      value: 20
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_TiltMax
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: closestDistance
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
@@ -1797,6 +1850,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1904169715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6438964940339809399, guid: 26163d9667ae5f54e995a76fc265e35a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6438964940952771329}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904169717}
+  - component: {fileID: 1904169716}
+  m_Layer: 0
+  m_Name: BrasScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1904169716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6438964940339809398, guid: 26163d9667ae5f54e995a76fc265e35a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6438964940952771329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904169715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6262bffbc36d148be558c2a710ab48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  directionForce: {x: -0.022825032, y: 0.9456569, z: -0.32436413}
+  vitesseDeRotation: 200
+--- !u!4 &1904169717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6438964940339809401, guid: 26163d9667ae5f54e995a76fc265e35a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6438964940952771329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904169715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083176358 stripped
 GameObject:
