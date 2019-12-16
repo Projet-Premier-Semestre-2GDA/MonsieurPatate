@@ -9,7 +9,10 @@ public class Bras : Membre
 
     public override void Action(float analogiqueReturn = 1)
     {
-        
+        if (Time.timeScale == 0)
+        {
+            analogiqueReturn = 0;
+        }
         directionForce = transform.up;
         rb.AddForce(directionForce * puissanceBras * analogiqueReturn);
     }

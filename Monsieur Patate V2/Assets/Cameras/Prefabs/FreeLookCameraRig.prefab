@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 11400002}
   m_Layer: 0
   m_Name: FreeLookCameraRig
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,11 +197,12 @@ MonoBehaviour:
   m_Target: {fileID: 0}
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
-  m_MoveSpeed: 1
-  m_TurnSpeed: 1.5
-  m_TurnSmoothing: 0
-  m_TiltMax: 75
-  m_TiltMin: 45
+  cameraMouv: {x: 0, y: 0}
+  m_MoveSpeed: 30
+  m_TurnSpeed: 1
+  m_TurnSmoothing: 5
+  m_TiltMax: 45
+  m_TiltMin: 15
   m_LockCursor: 0
   m_VerticalAutoReturn: 0
 --- !u!114 &11400002
@@ -220,5 +221,5 @@ MonoBehaviour:
   returnTime: 0.4
   sphereCastRadius: 0.1
   visualiseInEditor: 1
-  closestDistance: 0.5
+  closestDistance: 6.5
   dontClipTag: Player

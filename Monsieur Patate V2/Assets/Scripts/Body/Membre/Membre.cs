@@ -19,6 +19,7 @@ public class Membre : MonoBehaviour
     public virtual void Action(float analogiqueReturn = 1) //corresponds a la première touche d'action, généralement un mouvement
     {
         Debug.Log(transform.name + " make the first action with an intensity of " + analogiqueReturn);
+        
     }
 
     protected void SetMembreColor(Color colorToSet)

@@ -58,6 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9d837f34df2024794758c4327ca67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupeMembre: -1
+  groupeColor:
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
   rb: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
   directionForce: {x: 0, y: 0, z: 0}
   vitesseDeRotation: 200

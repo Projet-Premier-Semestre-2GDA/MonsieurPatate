@@ -12,7 +12,7 @@ namespace UnityStandardAssets.Cameras
         // 	Camera Rig
         // 		Pivot
         // 			Camera
-        public Vector2 cameraMouv;
+
         [SerializeField] private float m_MoveSpeed = 1f;                      // How fast the rig will move to keep up with the target's position.
         [Range(0f, 10f)] [SerializeField] private float m_TurnSpeed = 1.5f;   // How fast the rig will rotate from user input.
         [SerializeField] private float m_TurnSmoothing = 0.0f;                // How much smoothing to apply to the turn input, to reduce mouse-turn jerkiness
@@ -43,11 +43,8 @@ namespace UnityStandardAssets.Cameras
 
         protected void Update()
         {
-            cameraMouv = new Vector2(
-                Input.GetAxis("HorizontalCamera"),
-                Input.GetAxis("VerticalCamera"));
             HandleRotationMovement();
-            if (m_LockCursor/* && Input.GetMouseButtonUp(0)*/)
+            if (m_LockCursor && Input.GetMouseButtonUp(0))
             {
                 Cursor.lockState = m_LockCursor ? CursorLockMode.Locked : CursorLockMode.None;
                 Cursor.visible = !m_LockCursor;
@@ -77,8 +74,8 @@ namespace UnityStandardAssets.Cameras
 			return;
 
             // Read the user input
-            var x = cameraMouv.x;
-            var y = cameraMouv.y;
+            var x = Input.GetAxis("HorizontalCamera");
+            var y = Input.GetAxis("VerticalCamera");
 
             // Adjust the look angle by an amount proportional to the turn speed and horizontal input.
             m_LookAngle += x*m_TurnSpeed;

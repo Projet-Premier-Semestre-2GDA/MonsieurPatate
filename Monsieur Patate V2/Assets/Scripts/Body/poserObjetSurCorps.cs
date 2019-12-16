@@ -120,99 +120,103 @@ public class poserObjetSurCorps : MonoBehaviour
         //Debug.Log(choosenOne.name); //fonctionne
 
         //--------------------------------------Ajout d'un membre ou suppression d'un membre--------------------------------------
-        if (Input.GetButtonDown("AjouterMembre"))
+        if (PauseScript.gameIsPause)
         {
-            //Debug.Log("Bouton AjouterMembre Appuyer"); //Fonctionne
-            //debugDeListe();
-            Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
-            Debug.DrawRay(ray.origin, ray.direction * 50, Color.white);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50f))
+            if (Input.GetButtonDown("AjouterMembre"))
             {
-                //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                Debug.Log(hit.collider.tag); //fonctionne
-                //Debug.Log("L'objet c'est " + );
-
-                if (hit.collider.CompareTag(this.gameObject.tag))
+                //Debug.Log("Bouton AjouterMembre Appuyer"); //Fonctionne
+                //debugDeListe();
+                Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
+                Debug.DrawRay(ray.origin, ray.direction * 50, Color.white);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 50f))
                 {
-                    //Debug.Log("Je fonctionne ?"); //fonctionne
-                    int testTemp = 0;
+                    //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
+                    Debug.Log(hit.collider.tag); //fonctionne
+                                                 //Debug.Log("L'objet c'est " + );
 
-                    for (int i = 0; i < ObjetCreer.Length; i++)
+                    if (hit.collider.CompareTag(this.gameObject.tag))
                     {
-                        if (ObjetCreer[i] != null)
+                        //Debug.Log("Je fonctionne ?"); //fonctionne
+                        int testTemp = 0;
+
+                        for (int i = 0; i < ObjetCreer.Length; i++)
                         {
-                            testTemp++;
-                        }
-                    }
-                    Debug.Log(testTemp);
-
-
-                    if (testTemp < 6)
-                    {
-                        //Debug.Log("Je fonctionne ?");//fonctionne
-                        Transform PointChoosen = FindNearestPoint(hit.point, listePointAttache);
-
-                        if (!CheckIfTaken(PointChoosen.position, ObjetCreer))
-                        {
-                            Debug.Log("J'ajoute un objet");
-                            GameObject objectTemp = MettreLeMembreSurLeCorps(PointChoosen);
-
-                            for (int i = 0; i < ObjetCreer.Length; i++)
+                            if (ObjetCreer[i] != null)
                             {
-                                if (ObjetCreer[i] == null)
+                                testTemp++;
+                            }
+                        }
+                        Debug.Log(testTemp);
+
+
+                        if (testTemp < 6)
+                        {
+                            //Debug.Log("Je fonctionne ?");//fonctionne
+                            Transform PointChoosen = FindNearestPoint(hit.point, listePointAttache);
+
+                            if (!CheckIfTaken(PointChoosen.position, ObjetCreer))
+                            {
+                                Debug.Log("J'ajoute un objet");
+                                GameObject objectTemp = MettreLeMembreSurLeCorps(PointChoosen);
+
+                                for (int i = 0; i < ObjetCreer.Length; i++)
                                 {
-                                    ObjetCreer.SetValue(objectTemp, i);
+                                    if (ObjetCreer[i] == null)
+                                    {
+                                        ObjetCreer.SetValue(objectTemp, i);
+                                    }
+
                                 }
 
+
                             }
-
-
                         }
+
                     }
 
                 }
 
+
+                //debugDeListe();
             }
-
-
-            //debugDeListe();
-        }
-        if (Input.GetButtonDown("EnleverMembre"))
-        {
-            Debug.Log("Bouton EnleverMembre Appuyer"); //Fonctionne
-            //debugDeListe();
-            Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50f))
+            if (Input.GetButtonDown("EnleverMembre"))
             {
-                //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                Debug.Log(hit.collider.tag); //fonctionne
-                                             //Debug.Log("L'objet c'est " + );
-                if (hit.collider.tag == "membre")
+                Debug.Log("Bouton EnleverMembre Appuyer"); //Fonctionne
+                                                           //debugDeListe();
+                Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 50f))
                 {
-                    //Debug.Log("j'atteint ?");
-                    for (int i = 0; i < ObjetCreer.Length; i++)
+                    //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
+                    Debug.Log(hit.collider.tag); //fonctionne
+                                                 //Debug.Log("L'objet c'est " + );
+                    if (hit.collider.tag == "membre")
                     {
-                        if (ObjetCreer[i] != null)
+                        //Debug.Log("j'atteint ?");
+                        for (int i = 0; i < ObjetCreer.Length; i++)
                         {
-                            if (ObjetCreer[i] == hit.collider.transform.gameObject)
+                            if (ObjetCreer[i] != null)
                             {
-                                ObjetCreer.SetValue(null, i);
-                                //Debug.LogError("coucou");
-                                //break;
+                                if (ObjetCreer[i] == hit.collider.transform.gameObject)
+                                {
+                                    ObjetCreer.SetValue(null, i);
+                                    //Debug.LogError("coucou");
+                                    //break;
+                                }
                             }
+
                         }
+                        removeObjetFromControlMembre(hit.collider.gameObject);
+                        //Debug.Log("Je détruit l'objet là hein");
+                        Destroy(hit.collider.gameObject);
 
                     }
-                    removeObjetFromControlMembre(hit.collider.gameObject);
-                    //Debug.Log("Je détruit l'objet là hein");
-                    Destroy(hit.collider.gameObject);
-
                 }
-            }
 
+            }
         }
+
     }
     private void removeObjetFromControlMembre(GameObject objectTemp)
     {
@@ -288,9 +292,6 @@ public class poserObjetSurCorps : MonoBehaviour
         }
         return test;
     }
-
-    
-
     void debugDeListe()
     {
         Debug.Log("-----------------------BEGIN_DEBUG-------------------------------");

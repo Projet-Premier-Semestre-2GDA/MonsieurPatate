@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupeSelectionner: 1
+  IndexChoosenOne: 0
   listePointAttache:
   - {fileID: 0}
   - {fileID: 0}
