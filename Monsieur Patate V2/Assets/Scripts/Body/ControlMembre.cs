@@ -40,6 +40,7 @@ public class ControlMembre : MonoBehaviour
         {
             item.Action(intensite);
             Debug.Log("l'objet \"" + item.name + "\" a effectue une action d'intensité " + intensite);
+
         }
     }
 
@@ -71,8 +72,9 @@ public class ControlMembre : MonoBehaviour
         }
     }
 
-    public void RemoveMembre(int groupe, Membre membreAEnlever)
+    public void RemoveMembre(Membre membreAEnlever)
     {
+        int groupe = membreAEnlever.groupeMembre;
         if (groupe == 0)
         {
             GroupeMembreUn.Remove(membreAEnlever);

@@ -33,8 +33,4 @@ public class Membre : MonoBehaviour
         
     }
 
-    protected virtual void OnDestroy()
-    {
-        GetComponentInParent<ControlMembre>().RemoveMembre(1,this.GetComponent<Membre>());
-    }
 }

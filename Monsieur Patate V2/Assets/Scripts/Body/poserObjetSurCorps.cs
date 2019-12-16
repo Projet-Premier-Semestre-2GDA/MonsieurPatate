@@ -27,7 +27,7 @@ public class poserObjetSurCorps : MonoBehaviour
     //---------------------------Gestions des Membre qui ont ete creer---------------------------
 
     public GameObject[] ObjetCreer = new GameObject[6];
-
+    
     GameObject choosenOne;
 
     Color randomColor;
@@ -205,6 +205,7 @@ public class poserObjetSurCorps : MonoBehaviour
                         }
 
                     }
+                    removeObjetFromControlMembre(hit.collider.gameObject);
                     //Debug.Log("Je détruit l'objet là hein");
                     Destroy(hit.collider.gameObject);
 
@@ -213,6 +214,12 @@ public class poserObjetSurCorps : MonoBehaviour
 
         }
     }
+    private void removeObjetFromControlMembre(GameObject objectTemp)
+    {
+        //Membre leMembreEnQuestion = objectTemp.GetComponent<Membre>();
+        GetComponent<ControlMembre>().RemoveMembre(objectTemp.GetComponent<Membre>());
+    }
+
     private GameObject MettreLeMembreSurLeCorps(Transform PointChoosen)
     {
         
