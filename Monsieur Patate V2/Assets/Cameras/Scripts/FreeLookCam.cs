@@ -70,12 +70,12 @@ namespace UnityStandardAssets.Cameras
 
         private void HandleRotationMovement()
         {
-			if(Time.timeScale < float.Epsilon)
-			return;
+			//if(Time.timeScale < float.Epsilon)
+			//return;
 
             // Read the user input
             var x = Input.GetAxis("HorizontalCamera");
-            var y = Input.GetAxis("VerticalCamera");
+            var y = -Input.GetAxis("VerticalCamera");
 
             // Adjust the look angle by an amount proportional to the turn speed and horizontal input.
             m_LookAngle += x*m_TurnSpeed;
@@ -103,8 +103,8 @@ namespace UnityStandardAssets.Cameras
 
 			if (m_TurnSmoothing > 0)
 			{
-				m_Pivot.localRotation = Quaternion.Slerp(m_Pivot.localRotation, m_PivotTargetRot, m_TurnSmoothing * Time.deltaTime);
-				transform.localRotation = Quaternion.Slerp(transform.localRotation, m_TransformTargetRot, m_TurnSmoothing * Time.deltaTime);
+				m_Pivot.localRotation = Quaternion.Slerp(m_Pivot.localRotation, m_PivotTargetRot, m_TurnSmoothing /** Time.unscaledDeltaTime*/);
+				transform.localRotation = Quaternion.Slerp(transform.localRotation, m_TransformTargetRot, m_TurnSmoothing /** Time.unscaledDeltaTime*/);
 			}
 			else
 			{

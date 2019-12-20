@@ -42,7 +42,7 @@ namespace UnityStandardAssets.Cameras
             }
             if (m_UpdateType == UpdateType.FixedUpdate)
             {
-                FollowTarget(Time.deltaTime);
+                FollowTarget(Time.unscaledDeltaTime);
             }
         }
 
@@ -57,7 +57,7 @@ namespace UnityStandardAssets.Cameras
             }
             if (m_UpdateType == UpdateType.LateUpdate)
             {
-                FollowTarget(Time.deltaTime);
+                FollowTarget(Time.unscaledDeltaTime);
             }
         }
 
@@ -72,7 +72,7 @@ namespace UnityStandardAssets.Cameras
             }
             if (m_UpdateType == UpdateType.ManualUpdate)
             {
-                FollowTarget(Time.deltaTime);
+                FollowTarget(Time.unscaledDeltaTime);
             }
         }
 

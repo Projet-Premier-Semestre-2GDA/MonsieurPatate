@@ -804,7 +804,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -829,13 +829,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623141168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: -9.69}
+  m_LocalRotation: {x: 0.1327083, y: -0.4779097, z: 0.07330168, w: 0.865227}
+  m_LocalPosition: {x: 8.9, y: 3.96, z: -5.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.44, y: -57.828003, z: 0}
 --- !u!114 &623141172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,9 +848,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6284019bd0bb547b46e6222ce8f8da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceWithTarget: 7
+  distanceMaxWithTarget: 10
+  angleMaxAutorisee: 30
   target: {fileID: 2083176358}
-  speedMovement: 100
+  speedMovement: 1
+  speedRotation: 130
 --- !u!114 &623141173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreeLookCameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.06
@@ -1388,51 +1394,8 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 2083176361}
-    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: m_MoveSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: m_TurnSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: m_TurnSmoothing
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: m_TiltMin
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: m_TiltMax
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: closestDistance
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
---- !u!1 &1286100154 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: 49a0e923d39ec3c4c8bb97699e2f2903,
-    type: 3}
-  m_PrefabInstance: {fileID: 1286100153}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1286100155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286100154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27048ef6da04fed49adb594d86cec819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listeDeRigidbody: []
 --- !u!1001 &1362740914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1621,6 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f08b845baf488446ab96197dfeea02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempsPourParcourirEcran: 15
 --- !u!114 &1440919652
 MonoBehaviour:
   m_ObjectHideFlags: 0
