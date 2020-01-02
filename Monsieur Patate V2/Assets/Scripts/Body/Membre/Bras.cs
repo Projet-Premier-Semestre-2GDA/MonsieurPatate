@@ -14,6 +14,6 @@ public class Bras : Membre
             analogiqueReturn = 0;
         }
         directionForce = transform.up;
-        rb.AddForce(directionForce * puissanceBras * analogiqueReturn);
+        rbActive.AddForce(directionForce * puissanceBras * analogiqueReturn, typeDeForceAppliquee);
     }
 }

@@ -14,6 +14,7 @@ public class ControlCurseur : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     private void LateUpdate()
     {
         if (Input.GetButtonDown("PauseButton"))

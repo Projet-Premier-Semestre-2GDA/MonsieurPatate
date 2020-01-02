@@ -14,10 +14,7 @@ public class poserObjetSurCorps : MonoBehaviour
 
     public int groupeSelectionner = 0;
     public int IndexChoosenOne;
-    //---------------------------Gestions des points d'attache---------------------------
-
-    public GameObject[] listePointAttache = new GameObject[6];
-    public string tagPointAttache = "pointAttache";
+    
     //---------------------------Gestions des Membre qu'on peut ajouter---------------------------
 
     public string tagMembre = "membre";
@@ -26,9 +23,9 @@ public class poserObjetSurCorps : MonoBehaviour
     //Vector3[] pointPris;
     //---------------------------Gestions des Membre qui ont ete creer---------------------------
 
-    public GameObject[] ObjetCreer = new GameObject[6];
+    //public GameObject[] ObjetCreer = new GameObject[6];
     
-    GameObject choosenOne;
+    GameObject membreChoisi;
 
     Color randomColor;
 
@@ -36,10 +33,9 @@ public class poserObjetSurCorps : MonoBehaviour
     
     void Start()
     {
-        listePointAttache = GameObject.FindGameObjectsWithTag(tagPointAttache);
+        
         randomColor = Random.ColorHSV();
-        choosenOne = MembrePossible[0];
-        ObjetCreer = new GameObject[6];
+        membreChoisi = MembrePossible[0];
     }
 
     // Update is called once per frame
@@ -110,12 +106,11 @@ public class poserObjetSurCorps : MonoBehaviour
             groupeSelectionner = 1;
         }
 
-        TestSiDoubleGameObject(ObjetCreer);
 
         
 
         
-        choosenOne = MembrePossible[IndexChoosenOne];
+        membreChoisi = MembrePossible[IndexChoosenOne];
 
         //Debug.Log(choosenOne.name); //fonctionne
 
@@ -135,43 +130,9 @@ public class poserObjetSurCorps : MonoBehaviour
                     Debug.Log(hit.collider.tag); //fonctionne
                                                  //Debug.Log("L'objet c'est " + );
 
-                    if (hit.collider.CompareTag(this.gameObject.tag))
+                    if (hit.collider.CompareTag("Player") || hit.collider.CompareTag(tagMembre))
                     {
-                        //Debug.Log("Je fonctionne ?"); //fonctionne
-                        int testTemp = 0;
-
-                        for (int i = 0; i < ObjetCreer.Length; i++)
-                        {
-                            if (ObjetCreer[i] != null)
-                            {
-                                testTemp++;
-                            }
-                        }
-                        Debug.Log(testTemp);
-
-
-                        if (testTemp < 6)
-                        {
-                            //Debug.Log("Je fonctionne ?");//fonctionne
-                            Transform PointChoosen = FindNearestPoint(hit.point, listePointAttache);
-
-                            if (!CheckIfTaken(PointChoosen.position, ObjetCreer))
-                            {
-                                Debug.Log("J'ajoute un objet");
-                                GameObject objectTemp = MettreLeMembreSurLeCorps(PointChoosen);
-
-                                for (int i = 0; i < ObjetCreer.Length; i++)
-                                {
-                                    if (ObjetCreer[i] == null)
-                                    {
-                                        ObjetCreer.SetValue(objectTemp, i);
-                                    }
-
-                                }
-
-
-                            }
-                        }
+                        MettreLeMembreSurLeCorps(hit.point, hit.collider.gameObject);
 
                     }
 
@@ -193,23 +154,24 @@ public class poserObjetSurCorps : MonoBehaviour
                                                  //Debug.Log("L'objet c'est " + );
                     if (hit.collider.tag == "membre")
                     {
-                        //Debug.Log("j'atteint ?");
-                        for (int i = 0; i < ObjetCreer.Length; i++)
-                        {
-                            if (ObjetCreer[i] != null)
-                            {
-                                if (ObjetCreer[i] == hit.collider.transform.gameObject)
-                                {
-                                    ObjetCreer.SetValue(null, i);
-                                    //Debug.LogError("coucou");
-                                    //break;
-                                }
-                            }
+                        hit.collider.GetComponent<PointAttache>().SupprimerObjet();
+                        //Debug.Log(pointAttache.objetCreer);
+                        //for (int i = 0; i < pointAttache.objetCreer.Length; i++)
+                        //{
+                        //    if (pointAttache.objetCreer[i] != null)
+                        //    {
+                        //        if (pointAttache.objetCreer[i] == hit.collider.transform.gameObject)
+                        //        {
+                        //            pointAttache.objetCreer.SetValue(null, i);
+                        //            //Debug.LogError("coucou");
+                        //            //break;
+                        //        }
+                        //    }
 
-                        }
-                        removeObjetFromControlMembre(hit.collider.gameObject);
-                        //Debug.Log("Je détruit l'objet là hein");
-                        Destroy(hit.collider.gameObject);
+                        //}
+                        //removeObjetFromControlMembre(hit.collider.gameObject);
+                        ////Debug.Log("Je détruit l'objet là hein");
+                        //Destroy(hit.collider.gameObject);
 
                     }
                 }
@@ -224,14 +186,24 @@ public class poserObjetSurCorps : MonoBehaviour
         GetComponent<ControlMembre>().RemoveMembre(objectTemp.GetComponent<Membre>());
     }
 
-    private GameObject MettreLeMembreSurLeCorps(Transform PointChoosen)
+    private void MettreLeMembreSurLeCorps(Vector3 pointChoose, GameObject membreParent)
     {
+        PointAttache pointAttacheParent = membreParent.GetComponent<PointAttache>();
+        Transform transformChoose = FindNearestPoint(pointChoose, pointAttacheParent.listePointAttache);
+        //creation du membre
+        GameObject membreEnfant = Instantiate(membreChoisi, transformChoose);
+        //Assignation du groupe
+        Membre scriptMembreEnfant = membreEnfant.GetComponent<Membre>();
+        scriptMembreEnfant.groupeMembre = groupeSelectionner;
         
-        GameObject objectTemp = Instantiate(choosenOne, PointChoosen);
-        Membre membreTemp = objectTemp.GetComponent<Membre>();
-        membreTemp.groupeMembre = groupeSelectionner;
-        GetComponent<ControlMembre>().AddMembre(membreTemp, groupeSelectionner);
-        return objectTemp;
+        //Assignation des parents
+        PointAttache pointAttacheObjet = membreEnfant.GetComponent<PointAttache>();
+        pointAttacheObjet.parent = membreParent;
+        //Assignation des enfants
+        pointAttacheParent.SetEnfant(transformChoose, membreEnfant);
+        //Control du membre
+        GetComponent<ControlMembre>().AddMembre(scriptMembreEnfant, groupeSelectionner);
+        scriptMembreEnfant.rbParent = membreParent.GetComponent<Rigidbody>();
     }
 
     Transform FindNearestPoint(Vector3 pointCompare, GameObject[] arrayTest)
@@ -242,7 +214,7 @@ public class poserObjetSurCorps : MonoBehaviour
         for (int i = 0; i < arrayTest.Length; i++)
         {
             Vector3 PositionTemp = arrayTest[i].transform.position;
-            
+
             if (nearestPoint == transform)
             {
                 nearestPoint = arrayTest[i].transform;
@@ -255,74 +227,5 @@ public class poserObjetSurCorps : MonoBehaviour
         return nearestPoint;
     }
 
-    bool CheckIfTaken(Vector3 objetDeTest, GameObject[] ListCheck)
-    {
-        bool test = false;
-
-        foreach (var item in ListCheck)
-        {
-            if(item != null)
-            {
-                if (item.transform.position == objetDeTest)
-                {
-                    test = true;
-                }
-            }
-            
-        }
-
-        return test;
-    }
-    bool TestSiDoubleGameObject(GameObject[] liste) 
-    {
-        bool test = false;
-        for (int i = 0; i < liste.Length; i++)
-        {
-            for (int j = 0; j < liste.Length; j++)
-            {
-                if(i != j && liste[i] != null && liste[j] != null)
-                {
-                    if(liste[i] == liste[j])
-                    {
-                        test = true;
-                        liste[j] = null;
-                    }
-                }
-            }
-        }
-        return test;
-    }
-    void debugDeListe()
-    {
-        Debug.Log("-----------------------BEGIN_DEBUG-------------------------------");
-
-        for (int i = 0; i < ObjetCreer.Length; i++)
-        {
-
-            if (ObjetCreer[i] == null)
-            {
-                Debug.Log("L'objet numéro " + i + " est null");
-            }
-            else
-            {
-                if (ObjetCreer[i].name.Contains("Bras"))
-                {
-                    Debug.Log("L'objet numéro " + i + " est un Bras");
-                }
-                else if (ObjetCreer[i].name.Contains("Jambe"))
-                {
-                    Debug.Log("L'objet numéro " + i + " est une Jambe");
-                }
-                else
-                {
-                    Debug.Log("L'objet numéro " + i + " est... je sais pas ce que c'est, c'est un \" " + ObjetCreer[i].name + "\"");
-                }
-
-            }
-
-        }
-        Debug.Log("-----------------------END_DEBUG-------------------------------");
-
-    }
 
 }

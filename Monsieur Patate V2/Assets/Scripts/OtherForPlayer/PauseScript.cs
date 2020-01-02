@@ -22,27 +22,8 @@ public class PauseScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        //if (Input.GetButtonDown("PauseButton"))
-        //{
-        //    gameIsPause = !gameIsPause;
-        //    if (gameIsPause)
-        //    {
-        //        resumeGame();
-        //        gameIsPause = false;
-        //    }
-        //    else
-        //    {
-        //        saveVariable();
-        //        pauseGame();
-        //        gameIsPause = true; ;
-        //    }
-        //}
-        //if (gameIsPause)
-        //{
-        //    pauseGame();
-        //}
 
         if (Input.GetButtonDown("PauseButton"))
         {

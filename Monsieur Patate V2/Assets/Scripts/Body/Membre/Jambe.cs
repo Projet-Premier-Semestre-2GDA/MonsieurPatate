@@ -15,6 +15,6 @@ public class Jambe : Membre
             analogiqueReturn = 0;
         }
         directionForce = -transform.up;
-        rb.AddForce(directionForce * puissanceJambe*analogiqueReturn);
+        rbActive.AddForce(directionForce * puissanceJambe*analogiqueReturn, typeDeForceAppliquee);
     }
 }

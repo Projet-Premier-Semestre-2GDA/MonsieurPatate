@@ -38,8 +38,16 @@ public class ControlMembre : MonoBehaviour
     {
         foreach (var item in listeDeMembre)
         {
-            item.Action(intensite);
-            Debug.Log("l'objet \"" + item.name + "\" a effectue une action d'intensité " + intensite);
+            try
+            {
+                item.Action(intensite);
+                Debug.Log("l'objet \"" + item.name + "\" a effectue une action d'intensité " + intensite);
+            }
+            catch (MissingReferenceException)
+            {
+                listeDeMembre.Remove(item);
+                throw;
+            }
 
         }
     }
