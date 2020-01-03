@@ -86,8 +86,8 @@ public class poserObjetSurCorps : MonoBehaviour
 
         if (OnAxisObjectDown) choosingObject = Input.GetAxis("ChooseObject"); else choosingObject = 0;
         //En theorie ca marche mais ma manette fais de la merde donc je peux pas tester
-        //Debug.Log("ChoosingGroup : " + choosingGroup);
-        //Debug.Log("ChoosingObject : " + choosingObject);
+        Debug.Log("ChoosingGroup : " + choosingGroup);
+        Debug.Log("ChoosingObject : " + choosingObject);
 
         //Choix du membre et groupe
 
@@ -213,6 +213,8 @@ public class poserObjetSurCorps : MonoBehaviour
 
         }
     }
+
+
     private GameObject MettreLeMembreSurLeCorps(Transform PointChoosen)
     {
         
