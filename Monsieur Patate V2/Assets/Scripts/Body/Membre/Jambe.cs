@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jambe : Membre
 {
     public float puissanceJambe = 10;
-    
+    private bool onCollision = false;
 
 
     public override void Action(float analogiqueReturn = 1)
@@ -14,7 +14,23 @@ public class Jambe : Membre
         {
             analogiqueReturn = 0;
         }
-        directionForce = -transform.up;
-        rbActive.AddForce(directionForce * puissanceJambe*analogiqueReturn, typeDeForceAppliquee);
+        if (onCollision)
+        {
+            directionForce = -transform.up;
+            rbActive.AddForce(directionForce * puissanceJambe * analogiqueReturn, typeDeForceAppliquee);
+        }
+        
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("sol") || collision.collider.CompareTag("canJump"))
+        {
+            onCollision = true;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        onCollision = false;
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5346473932635713447}
   - component: {fileID: 5346473932635713440}
-  - component: {fileID: -3111069764480306219}
+  - component: {fileID: 5096904312711803246}
   - component: {fileID: 4534834315010640963}
   - component: {fileID: 355799011410994169}
   - component: {fileID: 6098124102668138016}
@@ -33,7 +33,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5346473933537403293}
-  - {fileID: 7546750419706580006}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,7 +49,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &-3111069764480306219
+--- !u!114 &5096904312711803246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,15 +58,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5346473932635713441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9d837f34df2024794758c4327ca67d, type: 3}
+  m_Script: {fileID: 11500000, guid: 13698e0de4ceb404280e4dc1c38b6a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groupeMembre: -1
-  typeDeForceAppliquee: 2
+  typeDeForceAppliquee: 1
   applyForceToThisMembre: 1
   rbParent: {fileID: 0}
   vitesseDeRotation: 200
-  puissanceJambe: 5
+  puissanceJambe: 100
 --- !u!54 &4534834315010640963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listePointAttache:
-  - {fileID: 7501673433513104588}
+  - {fileID: 0}
   objetCreer:
   - {fileID: 0}
   parent: {fileID: 0}
@@ -194,33 +193,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7501673433513104588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7546750419706580006}
-  m_Layer: 9
-  m_Name: Point Attache (1)
-  m_TagString: pointAttache
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7546750419706580006
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7501673433513104588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5346473932635713447}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
