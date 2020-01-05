@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6947610467298364417}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 6057772679896251516}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 7721645701543221796}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 2432328144339377911}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 4174125392811371353}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 4207779091657528581}
   m_Layer: 0
   m_Name: Tobogan
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 4276453661519649083}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: canJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

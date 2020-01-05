@@ -27,14 +27,14 @@ public class poserObjetSurCorps : MonoBehaviour
     
     GameObject membreChoisi;
 
-    Color randomColor;
+    //Color randomColor;
 
 
     
     void Start()
     {
         
-        randomColor = Random.ColorHSV();
+        //randomColor = Random.ColorHSV();
         membreChoisi = MembrePossible[0];
     }
 
@@ -152,7 +152,7 @@ public class poserObjetSurCorps : MonoBehaviour
                     //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
                     Debug.Log(hit.collider.tag); //fonctionne
                                                  //Debug.Log("L'objet c'est " + );
-                    if (hit.collider.tag == "membre")
+                    if (hit.collider.CompareTag("membre"))
                     {
                         hit.collider.GetComponent<PointAttache>().SupprimerObjet();
                         //Debug.Log(pointAttache.objetCreer);
@@ -180,7 +180,7 @@ public class poserObjetSurCorps : MonoBehaviour
         }
 
     }
-    private void removeObjetFromControlMembre(GameObject objectTemp)
+    private void RemoveObjetFromControlMembre(GameObject objectTemp)
     {
         //Membre leMembreEnQuestion = objectTemp.GetComponent<Membre>();
         GetComponent<ControlMembre>().RemoveMembre(objectTemp.GetComponent<Membre>());

@@ -20,16 +20,25 @@ public class ControlMembre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Utilisation des membre en fonction de si l'on relache les bouton ou non
         ActionGroupe = new Vector2(Input.GetAxis("ActionGroupe1"), Input.GetAxis("ActionGroupe2"));
         if (ActionGroupe.x != 0)
         {
             UtilisationGroupeMembre(GroupeMembreUn, ActionGroupe.x);
 
         }
+        else
+        {
+            NonUtilisationGroupeMembre(GroupeMembreUn);
+        }
         if (ActionGroupe.y != 0)
         {
             UtilisationGroupeMembre(GroupeMembreDeux, ActionGroupe.y);
 
+        }
+        else
+        {
+            NonUtilisationGroupeMembre(GroupeMembreDeux);
         }
 
     }
@@ -51,8 +60,25 @@ public class ControlMembre : MonoBehaviour
 
         }
     }
+    private void NonUtilisationGroupeMembre(List<Membre> listeDeMembre)
+    {
+        foreach (var item in listeDeMembre)
+        {
+            try
+            {
+                item.NonAction();
+                Debug.Log("l'objet \"" + item.name + "\" a effectue une non-action");
+            }
+            catch (MissingReferenceException)
+            {
+                listeDeMembre.Remove(item);
+                throw;
+            }
 
-    
+        }
+    }
+
+
     public void SetColor(Color couleur)
     {
         foreach (var item in gameObject.GetComponentsInChildren<MeshRenderer>(false))
