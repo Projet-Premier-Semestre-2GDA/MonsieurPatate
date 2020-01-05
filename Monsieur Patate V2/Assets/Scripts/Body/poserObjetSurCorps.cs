@@ -1,200 +1,179 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityScript.Lang;
 
 public class poserObjetSurCorps : MonoBehaviour
 {
     //---------------------------Choix du groupe et des objet---------------------------
-    float choosingGroup;
-    bool OnAxisGroupDown = false;
-    bool OnAxisGroup = false;
-    float choosingObject;
-    bool OnAxisObjectDown = false;
-    bool OnAxisObject = false;
-
-    public int groupeSelectionner = 0;
-    public int IndexChoosenOne;
+    public int chosedGroupIndex = 0;
+    public int chosedLimbIndex = 0;
     
     //---------------------------Gestions des Membre qu'on peut ajouter---------------------------
 
-    public string tagMembre = "membre";
-    
-    public List<GameObject> MembrePossible = new List<GameObject>(2);
+    public string limbTag = "membre";
+
+    public List<GameObject> Limbs = new List<GameObject>(2);
     //Vector3[] pointPris;
     //---------------------------Gestions des Membre qui ont ete creer---------------------------
 
     //public GameObject[] ObjetCreer = new GameObject[6];
     
-    GameObject membreChoisi;
+    private GameObject chosedLimb;
 
-    Color randomColor;
+    private Color randomColor;
 
+    //----------------------------Références à l'UI'------------------------------------------------
 
+    [SerializeField] private GameObject LeftSlot;
+    private SlotScript leftSS;
+    [SerializeField] private GameObject RightSlot;
+    private SlotScript rightSS;
+    [SerializeField] private GameObject UpSlot;
+    private SlotScript upSS;
+    [SerializeField] private GameObject DownSlot;
+    private SlotScript downSS;
+    [SerializeField] private GameObject CenterSlot;
+    private SlotScript centerSS;
     
     void Start()
     {
-        
         randomColor = Random.ColorHSV();
-        membreChoisi = MembrePossible[0];
+        this.chosedLimb = this.Limbs[0];
+        
+        //UI startup
+        this.centerSS = this.CenterSlot.GetComponent<SlotScript>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //--------------------------------------PreGestionDesInputAxis--------------------------------------
-        if (Input.GetAxis("ChooseGroupe") !=0)
-        {
-            if (!OnAxisGroup)
-            {
-                OnAxisGroupDown = true;
-            }
-            else
-            {
-                OnAxisGroupDown = false;
-            }
-            OnAxisGroup = true;
-        }
-        else
-        {
-            OnAxisGroup = false;
-            OnAxisGroupDown = false;
-        }
-
-        if (Input.GetAxis("ChooseObject") != 0)
-        {
-            if (!OnAxisObject)
-            {
-                OnAxisObjectDown = true;
-            }
-            else
-            {
-                OnAxisObjectDown = false;
-            }
-            OnAxisObject = true;
-        }
-        else
-        {
-            OnAxisObject = false;
-            OnAxisObjectDown = false;
-        }
-        //--------------------------------------Gestion des Membre--------------------------------------
-        if (OnAxisGroupDown) choosingGroup = Input.GetAxis("ChooseGroupe");  else choosingGroup = 0;
-
-        if (OnAxisObjectDown) choosingObject = Input.GetAxis("ChooseObject"); else choosingObject = 0;
-        //En theorie ca marche mais ma manette fais de la merde donc je peux pas tester
-        //Debug.Log("ChoosingGroup : " + choosingGroup);
-        //Debug.Log("ChoosingObject : " + choosingObject);
-
-        //Choix du membre et groupe
-
-        IndexChoosenOne += Mathf.RoundToInt(choosingObject);
-        groupeSelectionner += Mathf.RoundToInt(choosingGroup);
-        if (IndexChoosenOne < 0)
-        {
-            IndexChoosenOne = MembrePossible.Count - 1;
-        }
-        else if (IndexChoosenOne >= MembrePossible.Count)
-        {
-            IndexChoosenOne = 0;
-        }
-        if (groupeSelectionner > 1)
-        {
-            groupeSelectionner = 0;
-        }
-        else if (groupeSelectionner < 0)
-        {
-            groupeSelectionner = 1;
-        }
-
-
+    void Update() {
         
-
         
-        membreChoisi = MembrePossible[IndexChoosenOne];
-
-        //Debug.Log(choosenOne.name); //fonctionne
+        //Sélection des membres et groupes
+        ChooseLimb();
+        ChooseGroup();
 
         //--------------------------------------Ajout d'un membre ou suppression d'un membre--------------------------------------
-        if (PauseScript.gameIsPause)
-        {
-            if (Input.GetButtonDown("AjouterMembre"))
-            {
-                //Debug.Log("Bouton AjouterMembre Appuyer"); //Fonctionne
-                //debugDeListe();
-                Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
-                Debug.DrawRay(ray.origin, ray.direction * 50, Color.white);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit, 50f))
-                {
-                    //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                    Debug.Log(hit.collider.tag); //fonctionne
-                                                 //Debug.Log("L'objet c'est " + );
-
-                    if (hit.collider.CompareTag("Player") || hit.collider.CompareTag(tagMembre))
-                    {
-                        MettreLeMembreSurLeCorps(hit.point, hit.collider.gameObject);
-
-                    }
-
-                }
-
-
-                //debugDeListe();
-            }
-            if (Input.GetButtonDown("EnleverMembre"))
-            {
-                Debug.Log("Bouton EnleverMembre Appuyer"); //Fonctionne
-                                                           //debugDeListe();
-                Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit, 50f))
-                {
-                    //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                    Debug.Log(hit.collider.tag); //fonctionne
-                                                 //Debug.Log("L'objet c'est " + );
-                    if (hit.collider.tag == "membre")
-                    {
-                        hit.collider.GetComponent<PointAttache>().SupprimerObjet();
-                        //Debug.Log(pointAttache.objetCreer);
-                        //for (int i = 0; i < pointAttache.objetCreer.Length; i++)
-                        //{
-                        //    if (pointAttache.objetCreer[i] != null)
-                        //    {
-                        //        if (pointAttache.objetCreer[i] == hit.collider.transform.gameObject)
-                        //        {
-                        //            pointAttache.objetCreer.SetValue(null, i);
-                        //            //Debug.LogError("coucou");
-                        //            //break;
-                        //        }
-                        //    }
-
-                        //}
-                        //removeObjetFromControlMembre(hit.collider.gameObject);
-                        ////Debug.Log("Je détruit l'objet là hein");
-                        //Destroy(hit.collider.gameObject);
-
-                    }
-                }
-
-            }
+        if (PauseScript.isGamePaused) {
+            AddLimb();
+            RemoveLimb();
         }
-
-    }
-    private void removeObjetFromControlMembre(GameObject objectTemp)
-    {
-        //Membre leMembreEnQuestion = objectTemp.GetComponent<Membre>();
-        GetComponent<ControlMembre>().RemoveMembre(objectTemp.GetComponent<Membre>());
     }
 
-    private void MettreLeMembreSurLeCorps(Vector3 pointChoose, GameObject membreParent)
+    private void ChooseLimb() {
+        if (Input.GetAxisRaw("ChooseLimb") != 0) {
+            
+            Debug.Log(Input.GetAxisRaw("ChooseLimb"));
+            
+            this.chosedLimbIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseLimb"));
+
+            int limbLeftIndex;
+            int limbRightIndex;
+
+            chosedLimbIndex = ClampIndexInArray(this.chosedLimbIndex, this.Limbs.Count);
+            
+            limbLeftIndex = ClampIndexInArray(this.chosedLimbIndex - 1, this.Limbs.Count);
+            limbRightIndex = ClampIndexInArray(this.chosedLimbIndex + 1, this.Limbs.Count);
+            
+            this.chosedLimb = this.Limbs[this.chosedLimbIndex];
+            Debug.Log(chosedLimb.name);
+            
+            //UI Stuff
+            //Increment/decrement on the image array
+            this.leftSS.UpdateIcon(limbLeftIndex);
+            this.centerSS.UpdateIcon(limbRightIndex);
+            this.rightSS.UpdateIcon(limbRightIndex);
+        }
+    }
+
+    private int ClampIndexInArray(int index, int arrayLength) {
+        if (index < 0){
+            index = arrayLength - 1;
+        }
+        else if (index >= arrayLength){
+            index= 0;
+        }
+        return index;
+    }
+
+
+    private void ChooseGroup() {
+        if (Input.GetAxisRaw("ChooseGroup") != 0) {
+            this.chosedGroupIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseGroup"));
+            this.chosedGroupIndex = ClampIndexInArray(chosedGroupIndex, 2);
+            int otherGroupIndex = ClampIndexInArray(this.chosedGroupIndex + 1, 2);
+            //UI Stuff
+        }
+    }
+    private void AddLimb() {
+        if (Input.GetButtonDown("AddLimb")) {
+            Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
+            Debug.DrawRay(ray.origin, ray.direction * 50, Color.white);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 50f))
+            {
+                //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
+                Debug.Log(hit.collider.tag); //fonctionne
+                //Debug.Log("L'objet c'est " + );
+        
+                if (hit.collider.CompareTag("Player") || hit.collider.CompareTag(this.limbTag))
+                {
+                    this.PutLimbOnBody(hit.point, hit.collider.gameObject);
+                }
+            }
+            
+            //debugDeListe();
+        }
+    }
+    
+    private void RemoveLimb() {
+        if (Input.GetButtonDown("RemoveLimb"))
+        {
+                        
+            Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 50f))
+            {
+                //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
+                Debug.Log(hit.collider.tag); //fonctionne
+                //Debug.Log("L'objet c'est " + );
+                if (hit.collider.tag == "membre")
+                {
+                    hit.collider.GetComponent<PointAttache>().SupprimerObjet();
+                    //Debug.Log(pointAttache.objetCreer);
+                    //for (int i = 0; i < pointAttache.objetCreer.Length; i++)
+                    //{
+                    //    if (pointAttache.objetCreer[i] != null)
+                    //    {
+                    //        if (pointAttache.objetCreer[i] == hit.collider.transform.gameObject)
+                    //        {
+                    //            pointAttache.objetCreer.SetValue(null, i);
+                    //            //Debug.LogError("coucou");
+                    //            //break;
+                    //        }
+                    //    }
+        
+                    //}
+                    //removeObjetFromControlMembre(hit.collider.gameObject);
+                    ////Debug.Log("Je détruit l'objet là hein");
+                    //Destroy(hit.collider.gameObject);
+        
+                }
+            }
+        
+        }
+    }
+
+    private void PutLimbOnBody(Vector3 pointChoose, GameObject membreParent)
     {
         PointAttache pointAttacheParent = membreParent.GetComponent<PointAttache>();
         Transform transformChoose = FindNearestPoint(pointChoose, pointAttacheParent.listePointAttache);
         //creation du membre
-        GameObject membreEnfant = Instantiate(membreChoisi, transformChoose);
+        GameObject membreEnfant = Instantiate(this.chosedLimb, transformChoose);
         //Assignation du groupe
         Membre scriptMembreEnfant = membreEnfant.GetComponent<Membre>();
-        scriptMembreEnfant.groupeMembre = groupeSelectionner;
+        scriptMembreEnfant.groupeMembre = this.chosedGroupIndex;
         
         //Assignation des parents
         PointAttache pointAttacheObjet = membreEnfant.GetComponent<PointAttache>();
@@ -202,7 +181,7 @@ public class poserObjetSurCorps : MonoBehaviour
         //Assignation des enfants
         pointAttacheParent.SetEnfant(transformChoose, membreEnfant);
         //Control du membre
-        GetComponent<ControlMembre>().AddMembre(scriptMembreEnfant, groupeSelectionner);
+        GetComponent<ControlMembre>().AddMembre(scriptMembreEnfant, this.chosedGroupIndex);
         scriptMembreEnfant.rbParent = membreParent.GetComponent<Rigidbody>();
     }
 

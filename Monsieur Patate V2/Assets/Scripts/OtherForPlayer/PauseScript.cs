@@ -11,12 +11,12 @@ public class PauseScript : MonoBehaviour
 
     GameObject UI;
 
-    public static bool gameIsPause;
+    public static bool isGamePaused;
     // Start is called before the first frame update
     void Start()
     {
         UI = GameObject.FindGameObjectWithTag("UI");
-        gameIsPause = false;
+        isGamePaused = false;
         UI.SetActive(false);
 
     }
@@ -27,20 +27,26 @@ public class PauseScript : MonoBehaviour
 
         if (Input.GetButtonDown("PauseButton"))
         {
-            gameIsPause = !gameIsPause;
-            if (gameIsPause)
+            if (isGamePaused)
             {
-                Time.timeScale = 0;
-                UI.SetActive(true);
+                this.OnGameUnpause();
             }
             else
             {
-                Time.timeScale = 1;
-                UI.SetActive(false);
-
+                this.OnGamePause();
             }
+            isGamePaused = !isGamePaused;
         }
+    }
 
+    private void OnGamePause() {
+        Time.timeScale = 0;
+        UI.SetActive(true);
+    }
+
+    private void OnGameUnpause() {
+        Time.timeScale = 1;
+        UI.SetActive(false);
     }
 
     void pauseGame()
