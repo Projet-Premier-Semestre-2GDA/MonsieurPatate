@@ -4,7 +4,7 @@ using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 public static class OoskaCustom {
-    static Dictionary<string, bool> AxisDownDict;
+    static Dictionary<string, bool> AxisDownDict = new Dictionary<string, bool>();
 
     public static bool GetAxisDown(string axisName) {
         float absoluteAxisValue = Mathf.Abs(Input.GetAxisRaw(axisName));

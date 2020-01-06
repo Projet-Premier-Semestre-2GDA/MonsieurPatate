@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class ControlMembre : MonoBehaviour
 {
-    
-    public List<Membre> GroupeMembreUn = new List<Membre>();
-    public List<Membre> GroupeMembreDeux = new List<Membre>();
+    public static int numberOfLimb = 4;
+    public List<Membre>[] arrayGroupLimb ;
     Rigidbody rb;
     Color selfColor;
 
-    Vector2 ActionGroupe;
+
+    private void Awake()
+    {
+        arrayGroupLimb = new List<Membre>[numberOfLimb];
+        for (int i = 0; i < arrayGroupLimb.Length; i++)
+        {
+            arrayGroupLimb[i] = new List<Membre>();
+        }
+    }
+
     void Start()
     {
         rb = GetComponentInParent<Rigidbody>();
@@ -21,58 +29,53 @@ public class ControlMembre : MonoBehaviour
     void Update()
     {
         //Utilisation des membre en fonction de si l'on relache les bouton ou non
-        ActionGroupe = new Vector2(Input.GetAxis("ActionGroupe1"), Input.GetAxis("ActionGroupe2"));
-        if (ActionGroupe.x != 0)
+        for (int i = 0; i < numberOfLimb; i++)
         {
-            UtilisationGroupeMembre(GroupeMembreUn, ActionGroupe.x);
+            
+            if (UseButtonDown("ActionGroupe" + (i + 1)))
+            {
+                UtilisationGroupeMembre(i);
+            }
+            else
+            {
+                NonUtilisationGroupeMembre(i);
+            }
+        }
 
-        }
-        else
-        {
-            NonUtilisationGroupeMembre(GroupeMembreUn);
-        }
-        if (ActionGroupe.y != 0)
-        {
-            UtilisationGroupeMembre(GroupeMembreDeux, ActionGroupe.y);
-
-        }
-        else
-        {
-            NonUtilisationGroupeMembre(GroupeMembreDeux);
-        }
+        
 
     }
 
-    private void UtilisationGroupeMembre(List<Membre> listeDeMembre, float intensite = 1)
+    private bool UseButtonDown(string inputName)
     {
-        foreach (var item in listeDeMembre)
+        if (inputName.Contains("1") || inputName.Contains("2"))
         {
-            try
+            return OoskaCustom.GetAxisDown(inputName);
+        }
+        else
+        {
+            return Input.GetButtonDown(inputName);
+        }
+    }
+
+    private void UtilisationGroupeMembre(int indexListeDeMembre, float intensite = 1)
+    {
+        foreach (var item in arrayGroupLimb[indexListeDeMembre])
+        {
+            if (item!= null)
             {
                 item.Action(intensite);
-                Debug.Log("l'objet \"" + item.name + "\" a effectue une action d'intensité " + intensite);
-            }
-            catch (MissingReferenceException)
-            {
-                listeDeMembre.Remove(item);
-                throw;
             }
 
         }
     }
-    private void NonUtilisationGroupeMembre(List<Membre> listeDeMembre)
+    private void NonUtilisationGroupeMembre(int indexListeDeMembre)
     {
-        foreach (var item in listeDeMembre)
+        foreach (var item in arrayGroupLimb[indexListeDeMembre])
         {
-            try
+            if (item != null)
             {
                 item.NonAction();
-                Debug.Log("l'objet \"" + item.name + "\" a effectue une non-action");
-            }
-            catch (MissingReferenceException)
-            {
-                listeDeMembre.Remove(item);
-                throw;
             }
 
         }
@@ -90,37 +93,13 @@ public class ControlMembre : MonoBehaviour
 
     public void AddMembre(Membre membreAAjouter,int groupeDAppartenance)
     {
-        switch (groupeDAppartenance)
-        {
-            case 0:
-                GroupeMembreUn.Add(membreAAjouter);
-                break;
-            case 1:
-                GroupeMembreDeux.Add(membreAAjouter);
-                break;
-            default:
-                AddMembre(
-                    membreAAjouter,
-                    Random.Range(0, 2));
-                break;
-        }
+        arrayGroupLimb[groupeDAppartenance].Add(membreAAjouter);
     }
 
     public void RemoveMembre(Membre membreAEnlever)
     {
         int groupe = membreAEnlever.groupeMembre;
-        if (groupe == 0)
-        {
-            GroupeMembreUn.Remove(membreAEnlever);
-        }
-        else if (groupe == 1)
-        {
-            GroupeMembreDeux.Remove(membreAEnlever);
-        }
-        else
-        {
-            Debug.Log("Le groupe " + groupe + " n'existe pas ou n'a pas ete creer.");
-        }
+        arrayGroupLimb[groupe].Remove(membreAEnlever);
     }
 
 }

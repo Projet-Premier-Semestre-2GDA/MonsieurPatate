@@ -6,7 +6,7 @@ public class Membre : MonoBehaviour
     public int groupeMembre = -1;
     public ForceMode typeDeForceAppliquee = ForceMode.Force;
     public bool applyForceToThisMembre = true;
-    protected Color[] groupeColor = new Color[2] {Color.blue,Color.red};
+    protected Color[] groupeColor = new Color[4] {Color.blue,Color.red,Color.green,Color.magenta};
     protected FixedJoint joint;
     protected Rigidbody rb;
     protected Rigidbody rbPlayer;
@@ -16,6 +16,7 @@ public class Membre : MonoBehaviour
     public float vitesseDeRotation = 200;
     public virtual void Start()
     {
+        
         Debug.Log("j'existe");
         //rb = GetComponentInParent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
@@ -35,7 +36,7 @@ public class Membre : MonoBehaviour
 
     public virtual void Action(float analogiqueReturn = 1) //corresponds a la première touche d'action, généralement un mouvement
     {
-        Debug.Log(transform.name + " make the first action with an intensity of " + analogiqueReturn);
+        Debug.Log(transform.name + " of the group " + groupeMembre + " make the first action with an intensity of " + analogiqueReturn);
         if (Time.timeScale == 0)
         {
             analogiqueReturn = 0;

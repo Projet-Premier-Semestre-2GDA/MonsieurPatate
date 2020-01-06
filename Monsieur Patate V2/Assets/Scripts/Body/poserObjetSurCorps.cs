@@ -63,7 +63,6 @@ public class poserObjetSurCorps : MonoBehaviour
 
     private void ChooseLimb() {
         if (Input.GetAxisRaw("ChooseLimb") != 0) {
-            
             Debug.Log(Input.GetAxisRaw("ChooseLimb"));
             
             this.chosedLimbIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseLimb"));
@@ -79,11 +78,11 @@ public class poserObjetSurCorps : MonoBehaviour
             this.chosedLimb = this.Limbs[this.chosedLimbIndex];
             Debug.Log(chosedLimb.name);
             
-            //UI Stuff
-            //Increment/decrement on the image array
-            this.leftSS.UpdateIcon(limbLeftIndex);
-            this.centerSS.UpdateIcon(limbRightIndex);
-            this.rightSS.UpdateIcon(limbRightIndex);
+            ////UI Stuff
+            ////Increment/decrement on the image array
+            //this.leftSS.UpdateIcon(limbLeftIndex);
+            //this.centerSS.UpdateIcon(limbRightIndex);
+            //this.rightSS.UpdateIcon(limbRightIndex);
         }
     }
 
@@ -99,10 +98,10 @@ public class poserObjetSurCorps : MonoBehaviour
 
 
     private void ChooseGroup() {
-        if (Input.GetAxisRaw("ChooseGroup") != 0) {
+        if (OoskaCustom.GetAxisDown("ChooseGroup")) {
             this.chosedGroupIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseGroup"));
-            this.chosedGroupIndex = ClampIndexInArray(chosedGroupIndex, 2);
-            int otherGroupIndex = ClampIndexInArray(this.chosedGroupIndex + 1, 2);
+            this.chosedGroupIndex = ClampIndexInArray(chosedGroupIndex, ControlMembre.numberOfLimb);
+            int otherGroupIndex = ClampIndexInArray(this.chosedGroupIndex + 1, ControlMembre.numberOfLimb);
             //UI Stuff
         }
     }
