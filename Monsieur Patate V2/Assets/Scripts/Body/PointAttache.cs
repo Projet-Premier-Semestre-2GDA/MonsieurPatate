@@ -83,7 +83,6 @@ public class PointAttache : MonoBehaviour
         {
             parent.GetComponent<PointAttache>().SupprimerEnfant(gameObject);
         }
-        
         foreach (var item in objetCreer)//permet de prevenir tout les enfants de se supprimer
         {
             if (item != null)
