@@ -2760,11 +2760,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body
       objectReference: {fileID: 0}
-    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8995801532925487423, guid: 6d22486261ba60c4e88e810c1ed317cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2862,6 +2857,11 @@ PrefabInstance:
       propertyPath: CenterSlot
       value: 
       objectReference: {fileID: 479896830}
+    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
 --- !u!1 &639093620 stripped
@@ -6149,7 +6149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f08b845baf488446ab96197dfeea02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempsPourParcourirEcran: 15
+  tempsPourParcourirEcran: 12
 --- !u!114 &1440919652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9057,6 +9057,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118386793264803153, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1118386792346175469, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -9068,11 +9073,6 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1118386793120394858, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1118386793264803153, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
         type: 3}
       propertyPath: m_LocalScale.x
       value: 100
