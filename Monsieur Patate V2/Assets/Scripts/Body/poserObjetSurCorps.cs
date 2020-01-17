@@ -62,7 +62,7 @@ public class poserObjetSurCorps : MonoBehaviour
     }
 
     private void ChooseLimb() {
-        if (Input.GetAxisRaw("ChooseLimb") != 0) {
+        if (OoskaCustom.GetAxisDown("ChooseLimb")) {
             Debug.Log(Input.GetAxisRaw("ChooseLimb"));
             
             this.chosedLimbIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseLimb"));

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ControlCurseur : MonoBehaviour
 {
-    public float tempsPourParcourirEcran = 1.5f;
+    [SerializeField] private float tempsPourParcourirEcran = 1.5f;
     public static Vector2 positionCurseur;
     RectTransform curseur;
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    private float horizontalCursorInput;
+    private float verticalCursorInput;
+    
+    void Start() {
         curseur = GetComponent<RectTransform>();
     }
-
-    // Update is called once per frame
     
     private void LateUpdate()
     {
@@ -22,16 +22,17 @@ public class ControlCurseur : MonoBehaviour
             curseur.localPosition = new Vector3(0,0,0);
         }
     }
-    void Update()
-    {
-        float h = Input.GetAxis("HorizontalCursor") * tempsPourParcourirEcran/GetComponentInParent<RectTransform>().rect.width ;
-        float v = Input.GetAxis("VerticalCursor") * tempsPourParcourirEcran / GetComponentInParent<RectTransform>().rect.height;
+    void Update() {
+        horizontalCursorInput = Input.GetAxis("HorizontalCursor");
+        verticalCursorInput = Input.GetAxis("VerticalCursor");
 
-
-
-        curseur.Translate(new Vector2(h,v));
-        positionCurseur = new Vector2(curseur.position.x, curseur.position.y);
-        //Debug.Log("La position du curseur est : " +positionCurseur);
+        float h = horizontalCursorInput * (GetComponentInParent<RectTransform>().rect.width / this.tempsPourParcourirEcran * 60);
+        float v = verticalCursorInput * (GetComponentInParent<RectTransform>().rect.height / this.tempsPourParcourirEcran * 60);
+        
+        Vector2 cursorVelocity = new Vector2(h, v);
+        
+        curseur.Translate(cursorVelocity * Time.unscaledDeltaTime);
+        positionCurseur = this.curseur.position;
     }
 
     int InputArrondi(float x, float threeshold = 0.01f)

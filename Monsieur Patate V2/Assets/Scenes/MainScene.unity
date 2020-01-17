@@ -3076,7 +3076,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.05
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -4172,6 +4172,11 @@ PrefabInstance:
       propertyPath: CenterSlot
       value: 
       objectReference: {fileID: 479896830}
+    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
 --- !u!1 &639093620 stripped
@@ -12716,6 +12721,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118386793264803153, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1118386792346175469, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -12727,11 +12737,6 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1118386793120394858, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1118386793264803153, guid: b1a82616fc4d7bd45987ba4d5bef6de0,
         type: 3}
       propertyPath: m_LocalScale.x
       value: 100
