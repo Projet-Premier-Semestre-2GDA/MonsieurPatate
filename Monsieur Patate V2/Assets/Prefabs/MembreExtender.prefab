@@ -101,6 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4769868557026192600}
+  - component: {fileID: 3025672393318661657}
   m_Layer: 0
   m_Name: Point Attache (1)
   m_TagString: pointAttache
@@ -122,6 +123,18 @@ Transform:
   m_Father: {fileID: 5346473932635713447}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &3025672393318661657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579032562183046818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5346473932635713441
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd7bbe8b1203074d8284b140c35cd89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listePointAttache:
-  - {fileID: 4579032562183046818}
+  automaticSearch: 1
+  listePointAttache: []
   objetCreer: []
   parent: {fileID: 0}
   tagPointAttache: pointAttache
