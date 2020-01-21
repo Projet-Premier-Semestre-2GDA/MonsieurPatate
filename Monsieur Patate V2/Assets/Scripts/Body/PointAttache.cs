@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PointAttache : MonoBehaviour
 {
+    [SerializeField] private bool automaticSearch = true;
     public GameObject[] listePointAttache = new GameObject[6];
     public GameObject[] objetCreer = new GameObject[6];
     [HideInInspector]public GameObject parent;
@@ -12,8 +13,25 @@ public class PointAttache : MonoBehaviour
 
     private void Start()
     {
+        if (automaticSearch)
+        {
+            SearchAttachPoint();
+        }
         name += Random.value;
+
         objetCreer = new GameObject[listePointAttache.Length];
+    }
+
+    private void SearchAttachPoint()
+    {
+        FindAttachPoint[] attachPointList = GetComponentsInChildren<FindAttachPoint>();
+        listePointAttache = new GameObject[attachPointList.Length];
+        {
+            for (int i = 0; i < attachPointList.Length; i++)
+            {
+                listePointAttache[i] = attachPointList[i].gameObject;
+            }
+        }
     }
 
     private void LateUpdate()
