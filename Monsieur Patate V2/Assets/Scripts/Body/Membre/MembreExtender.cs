@@ -67,7 +67,7 @@ public class MembreExtender : Membre
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("sol") || collision.collider.CompareTag("canJump"))
+        if (collision.collider.attachedRigidbody.CompareTag("sol") || collision.collider.attachedRigidbody.CompareTag("canJump"))
         {
             onCollision = true;
         }

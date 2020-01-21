@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bras : MembreAForce
 {
-    public float puissanceBras = 5;
+    //public float puissanceBras = 5;
 
 
     public override void Action(float analogiqueReturn = 1)
@@ -14,6 +14,6 @@ public class Bras : MembreAForce
             analogiqueReturn = 0;
         }
         directionForce = transform.up;
-        rbActive.AddForce(directionForce * puissanceBras * analogiqueReturn, typeDeForceAppliquee);
+        rbActive.AddForce(directionForce * puissance * analogiqueReturn, typeDeForceAppliquee);
     }
 }

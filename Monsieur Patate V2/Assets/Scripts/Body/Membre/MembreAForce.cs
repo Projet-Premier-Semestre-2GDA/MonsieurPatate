@@ -5,4 +5,5 @@ using UnityEngine;
 public class MembreAForce : Membre
 {
     public ForceMode typeDeForceAppliquee = ForceMode.Force;
+    public float puissance = 10f;
 }

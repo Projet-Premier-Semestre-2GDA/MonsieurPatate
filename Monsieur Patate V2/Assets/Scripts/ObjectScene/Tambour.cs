@@ -14,7 +14,7 @@ public class Tambour : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Player") || collision.collider.CompareTag("Player"))
+        if (collision.collider.attachedRigidbody.CompareTag("Player") || collision.collider.attachedRigidbody.CompareTag("Player"))
         {
             playerRb.AddForce(transform.up * puissanceTambour, ForceMode.Impulse);
         }

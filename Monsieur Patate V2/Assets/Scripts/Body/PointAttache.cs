@@ -6,7 +6,7 @@ public class PointAttache : MonoBehaviour
 {
     public GameObject[] listePointAttache = new GameObject[6];
     public GameObject[] objetCreer = new GameObject[6];
-    public GameObject parent;
+    [HideInInspector]public GameObject parent;
 
     public string tagPointAttache = "pointAttache";
 

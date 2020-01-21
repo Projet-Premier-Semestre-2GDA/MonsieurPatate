@@ -113,12 +113,12 @@ public class poserObjetSurCorps : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 50f))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                Debug.Log(hit.collider.tag); //fonctionne
+                Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
         
-                if (hit.collider.CompareTag("Player") || hit.collider.CompareTag(this.limbTag))
+                if (hit.collider.attachedRigidbody.CompareTag("Player") || hit.collider.attachedRigidbody.CompareTag(this.limbTag))
                 {
-                    this.PutLimbOnBody(hit.point, hit.collider.gameObject);
+                    this.PutLimbOnBody(hit.point, hit.collider.attachedRigidbody.gameObject);
                 }
             }
             
@@ -135,11 +135,11 @@ public class poserObjetSurCorps : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 50f))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                Debug.Log(hit.collider.tag); //fonctionne
+                Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
-                if (hit.collider.tag == "membre")
+                if (hit.collider.attachedRigidbody.tag == "membre")
                 {
-                    hit.collider.GetComponent<PointAttache>().SupprimerObjet();
+                    hit.collider.attachedRigidbody.GetComponent<PointAttache>().SupprimerObjet();
                     //Debug.Log(pointAttache.objetCreer);
                     //for (int i = 0; i < pointAttache.objetCreer.Length; i++)
                     //{

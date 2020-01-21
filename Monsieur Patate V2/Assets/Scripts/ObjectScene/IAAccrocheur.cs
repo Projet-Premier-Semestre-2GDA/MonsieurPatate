@@ -16,16 +16,16 @@ public class IAAccrocheur : IA
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("membre"))
+        if (other.attachedRigidbody.CompareTag("Player") || other.attachedRigidbody.CompareTag("membre"))
         {
-            Vector3 direction = other.transform.position - transform.position;
+            Vector3 direction = other.attachedRigidbody.transform.position - transform.position;
             rb.AddForce(direction.normalized * puissanceSaut, ForceMode.Impulse);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        var other = collision.collider;
+        var other = collision.collider.attachedRigidbody;
         if (other.CompareTag("Player") || other.CompareTag("membre"))
         {
             SeColler(other.gameObject,collision.GetContact(0).point);
