@@ -4,7 +4,7 @@ public class Membre : MonoBehaviour
 {
     // ceci est une nouvelle classe pour mes membre
     public int groupeMembre = -1;
-    //public ForceMode typeDeForceAppliquee = ForceMode.Force;
+    public ForceMode typeDeForceAppliquee = ForceMode.Force;
     public bool applyForceToThisMembre = true;
     protected Color[] groupeColor = new Color[4] {Color.blue,Color.red,Color.green,Color.magenta};
     protected FixedJoint joint;
@@ -13,7 +13,7 @@ public class Membre : MonoBehaviour
     protected Rigidbody rbActive;
     public Rigidbody rbParent;
     protected Vector3 directionForce = new Vector3();
-    //public float vitesseDeRotation = 200;
+    public float vitesseDeRotation = 200;
     public virtual void Start()
     {
         

@@ -5,15 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SlotScript : MonoBehaviour {
-    [SerializeField] protected Image Icon;
-    public Sprite[] IconsArray;
+    private Image Icon;
+    private Image[] IconsArray;
 
     private void Start() {
         this.Icon = transform.Find("Icon").GetComponent<Image>();
     }
 
     public void UpdateIcon(int iconIndex) {
-        this.Icon.sprite = this.IconsArray[iconIndex];
+        this.Icon.sprite = this.IconsArray[iconIndex].sprite;
     }
     
 }

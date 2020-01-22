@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MembreCollant : Membre
 {
-    //ForceMode typeDeForceAppliquee = ForceMode.Force;
     public float puissanceBras = 5;
     public bool isCollision = false;
     private Vector3 pointTouch;

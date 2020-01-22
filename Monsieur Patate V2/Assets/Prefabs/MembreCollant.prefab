@@ -87,7 +87,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6482622526523941559}
-  - component: {fileID: 6810962537786410414}
   m_Layer: 9
   m_Name: Point attache (1)
   m_TagString: pointAttache
@@ -109,18 +108,6 @@ Transform:
   m_Father: {fileID: 6649416710172586862}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.89300007, y: 91.285, z: -34.778}
---- !u!114 &6810962537786410414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536494582096595432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1047647253683621919
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,8 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupeMembre: -1
+  typeDeForceAppliquee: 2
   applyForceToThisMembre: 1
   rbParent: {fileID: 0}
+  vitesseDeRotation: 200
   puissanceBras: 5
   isCollision: 0
   lePetitJoint: {fileID: 1710788317149492584}
@@ -232,8 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd7bbe8b1203074d8284b140c35cd89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  automaticSearch: 1
-  listePointAttache: []
+  listePointAttache:
+  - {fileID: 536494582096595432}
   objetCreer:
   - {fileID: 0}
   parent: {fileID: 0}

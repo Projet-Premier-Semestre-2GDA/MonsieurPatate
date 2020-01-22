@@ -9,7 +9,7 @@ public class PauseScript : MonoBehaviour
     List<Vector3> listDeVitesseAngulaireActuel;
     List<bool> listeDeUseGravity;
 
-    private GameObject UI;
+    GameObject UI;
 
     public static bool isGamePaused;
     // Start is called before the first frame update
