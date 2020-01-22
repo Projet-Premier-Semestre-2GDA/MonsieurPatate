@@ -1055,6 +1055,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tobogan
       objectReference: {fileID: 0}
+    - target: {fileID: 4996534020443983137, guid: f1160a6d6cdd2134f8bc9d198325e81b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3536193917629618382, guid: f1160a6d6cdd2134f8bc9d198325e81b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6924,6 +6929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: jeux enfant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654016534846461212, guid: 3a4c9266a805e5c44b38e9edbeb4ec31,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2786257567423173576, guid: 3a4c9266a805e5c44b38e9edbeb4ec31,
         type: 3}
