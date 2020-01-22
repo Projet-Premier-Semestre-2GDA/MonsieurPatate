@@ -36,7 +36,7 @@ public class ControlMembre : MonoBehaviour
             {
                 UtilisationGroupeMembre(i);
             }
-            else
+            if (UseButtonUp("ActionGroupe" + (i + 1)))
             {
                 NonUtilisationGroupeMembre(i);
             }
@@ -55,6 +55,17 @@ public class ControlMembre : MonoBehaviour
         else
         {
             return Input.GetButtonDown(inputName);
+        }
+    }
+    private bool UseButtonUp(string inputName)
+    {
+        if (inputName.Contains("1") || inputName.Contains("2"))
+        {
+            return OoskaCustom.GetAxisUp(inputName);
+        }
+        else
+        {
+            return Input.GetButtonUp(inputName);
         }
     }
 
