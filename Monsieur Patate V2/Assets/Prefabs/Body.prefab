@@ -261,6 +261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0648641b57d81224fb0f92f7b593bca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupeColor:
+  - {r: 0.14901961, g: 0.6901961, b: 0.61960787, a: 1}
+  - {r: 0.81568635, g: 0.52156866, b: 0.37254903, a: 1}
+  - {r: 0.48235297, g: 0.8705883, b: 0.54509807, a: 1}
+  - {r: 0.79215693, g: 0.37254903, b: 0.5568628, a: 1}
   chosedGroupIndex: 0
   chosedLimbIndex: 0
   afficherLesMembresAuStart: 1

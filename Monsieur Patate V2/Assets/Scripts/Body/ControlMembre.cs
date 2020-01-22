@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControlMembre : MonoBehaviour
 {
+
     public static int numberOfLimb = 4;
     public List<Membre>[] arrayGroupLimb ;
     Rigidbody rb;
