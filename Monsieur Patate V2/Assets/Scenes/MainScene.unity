@@ -909,7 +909,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8f3a427750bcf69468e0ca9e4564f640,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f3a427750bcf69468e0ca9e4564f640,
         type: 3}
@@ -3066,7 +3066,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.89073324, b: 0.7122642, a: 1}
+  m_Color: {r: 1, g: 0.87930304, b: 0.7877358, a: 1}
   m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
