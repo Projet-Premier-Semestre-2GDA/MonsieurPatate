@@ -1391,6 +1391,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d1da54d8dfeceb94799e518bc259e5dc,
         type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 710f9d025f57588498f763a89538afd6,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: ec1c5682a42379f4da8d8e58442dd17e,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: aa47630381b084e45ba3ffeac1f0665f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e951d0dce621c75489cbcadaded01213, type: 3}
 --- !u!224 &131421112 stripped
@@ -3236,9 +3254,9 @@ MonoBehaviour:
   groupIcon: {fileID: 0}
   GroupIconsArray:
   - {fileID: 21300000, guid: d8544fda1aa40154aabd30466b378913, type: 3}
-  - {fileID: 21300000, guid: ec1c5682a42379f4da8d8e58442dd17e, type: 3}
   - {fileID: 21300000, guid: aa47630381b084e45ba3ffeac1f0665f, type: 3}
   - {fileID: 21300000, guid: 710f9d025f57588498f763a89538afd6, type: 3}
+  - {fileID: 21300000, guid: ec1c5682a42379f4da8d8e58442dd17e, type: 3}
 --- !u!1001 &520526231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6204,23 +6222,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d,
         type: 3}
-    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: IconsArray.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: IconsArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: d873f1308057bfb43ba21aae1e368f17,
-        type: 3}
-    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: IconsArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d,
-        type: 3}
     - target: {fileID: 5115841162175283254, guid: e951d0dce621c75489cbcadaded01213,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6252,6 +6253,23 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d873f1308057bfb43ba21aae1e368f17,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e951d0dce621c75489cbcadaded01213, type: 3}
 --- !u!224 &1036658306 stripped
@@ -8860,7 +8878,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 710f9d025f57588498f763a89538afd6,
+      objectReference: {fileID: 21300000, guid: aa47630381b084e45ba3ffeac1f0665f,
         type: 3}
     - target: {fileID: 5115841162175283254, guid: e951d0dce621c75489cbcadaded01213,
         type: 3}
@@ -8871,11 +8889,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -82
-      objectReference: {fileID: 0}
-    - target: {fileID: 4916461573522861324, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3475236912112473801, guid: e951d0dce621c75489cbcadaded01213,
         type: 3}
@@ -8904,6 +8917,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fec016db8df838243938a84e91fa3a36,
         type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 710f9d025f57588498f763a89538afd6,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: ec1c5682a42379f4da8d8e58442dd17e,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: aa47630381b084e45ba3ffeac1f0665f,
+        type: 3}
+    - target: {fileID: 4916461573522861324, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e951d0dce621c75489cbcadaded01213, type: 3}
 --- !u!224 &1488816650 stripped
@@ -13296,23 +13332,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d,
         type: 3}
-    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: IconsArray.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: IconsArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: d873f1308057bfb43ba21aae1e368f17,
-        type: 3}
-    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
-        type: 3}
-      propertyPath: IconsArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d,
-        type: 3}
     - target: {fileID: 5115841162175283254, guid: e951d0dce621c75489cbcadaded01213,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -13349,6 +13368,23 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d0d4056132421694b84580833a11cd60,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d873f1308057bfb43ba21aae1e368f17,
+        type: 3}
+    - target: {fileID: 4171723516613427161, guid: e951d0dce621c75489cbcadaded01213,
+        type: 3}
+      propertyPath: IconsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e951d0dce621c75489cbcadaded01213, type: 3}
