@@ -263,8 +263,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chosedGroupIndex: 0
   chosedLimbIndex: 0
+  afficherLesMembresAuStart: 1
   limbTag: membre
-  Limbs: []
+  Limbs:
+  - {fileID: 1047647253683621919, guid: f5a32f0496cd48f45b6a8ca73658e2d1, type: 3}
+  - {fileID: 5346473932635713441, guid: 89e05dc2205bcd945a213817115ceba3, type: 3}
+  - {fileID: 8297926958408774669, guid: 2bf9b042f9238b34a83bc5fe2fba88fc, type: 3}
+  - {fileID: 8812575264328954098, guid: 32c7ef2537b70bf478e482f2e8fb5503, type: 3}
+  - {fileID: 7584731596532634881, guid: 570d49f199435d743bc194d2d2ecb45c, type: 3}
+  - {fileID: 2911928235941676202, guid: a6a43d0dea97cde40930557678f2d2e1, type: 3}
+  - {fileID: 3544517195044982970, guid: 0cbad049af54fd443bf7bc3399fbbd2f, type: 3}
   LeftSlot: {fileID: 0}
   RightSlot: {fileID: 0}
   UpSlot: {fileID: 0}

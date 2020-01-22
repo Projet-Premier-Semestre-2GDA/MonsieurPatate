@@ -5,13 +5,12 @@ public class Membre : MonoBehaviour
     // ceci est une nouvelle classe pour mes membre
     [HideInInspector]public int groupeMembre = -1;
     //public ForceMode typeDeForceAppliquee = ForceMode.Force;
-    public bool applyForceToThisMembre = true;
     protected Color[] groupeColor = new Color[4] {Color.blue,Color.red,Color.green,Color.magenta};
     protected FixedJoint joint;
     protected Rigidbody rb;
     protected Rigidbody rbPlayer;
     protected Rigidbody rbActive;
-    public Rigidbody rbParent;
+    [HideInInspector] public Rigidbody rbParent;
     protected Vector3 directionForce = new Vector3();
     //public float vitesseDeRotation = 200;
     public virtual void Start()
@@ -24,14 +23,7 @@ public class Membre : MonoBehaviour
         rbPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
         SetMembreColor(groupeColor[groupeMembre]);
         joint.connectedBody = rbParent;
-        if (applyForceToThisMembre)
-        {
-            rbActive = rb;
-        }
-        else
-        {
-            rbActive = rbPlayer;
-        }
+        
     }
 
     public virtual void Action(float analogiqueReturn = 1) //corresponds a la première touche d'action, généralement un mouvement
@@ -44,7 +36,7 @@ public class Membre : MonoBehaviour
     }
     public virtual void NonAction()
     {
-
+        Debug.Log(this.name + " undo an action");
     }
 
     protected void SetMembreColor(Color colorToSet)

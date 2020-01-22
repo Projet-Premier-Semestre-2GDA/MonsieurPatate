@@ -137,23 +137,4 @@ public class PointAttache : MonoBehaviour
         return index;
     }
 
-    //bool CheckIfTaken(Vector3 objetDeTest, GameObject[] ListCheck)
-    //{
-    //    bool test = false;
-
-    //    foreach (var item in ListCheck)
-    //    {
-    //        if (item != null)
-    //        {
-    //            if (item.transform.position == objetDeTest)
-    //            {
-    //                test = true;
-    //            }
-    //        }
-
-    //    }
-
-    //    return test;
-    //}
-
 }

@@ -9,9 +9,10 @@ public class poserObjetSurCorps : MonoBehaviour
     //---------------------------Choix du groupe et des objet---------------------------
     public int chosedGroupIndex = 0;
     public int chosedLimbIndex = 0;
-    
+
     //---------------------------Gestions des Membre qu'on peut ajouter---------------------------
 
+    [SerializeField] private bool afficherLesMembresAuStart = true;
     public string limbTag = "membre";
 
     public List<GameObject> Limbs = new List<GameObject>(2);
@@ -39,6 +40,24 @@ public class poserObjetSurCorps : MonoBehaviour
     
     void Start()
     {
+        if (afficherLesMembresAuStart)
+        {
+            if (Limbs.Count == 0)
+            {
+                Debug.LogError("Il n'y a pas de Membre dans " + this.name + ".");
+                Debug.LogError("_______________________________________________________");
+
+            }
+            else
+            {
+                Debug.LogWarning("Il y a " + Limbs.Count + " membres dans " + this.name + ". Les voici :\n");
+                for (int i = 0; i < Limbs.Count; ++i)
+                {
+                    Debug.LogWarning("Le numero " + (i + 1) + " est un " + Limbs[i].name);
+                }
+                Debug.LogWarning("_______________________________________________________");
+            }
+        }
         randomColor = Random.ColorHSV();
         this.chosedLimb = this.Limbs[0];
         
@@ -140,23 +159,6 @@ public class poserObjetSurCorps : MonoBehaviour
                 if (hit.collider.attachedRigidbody.tag == "membre")
                 {
                     hit.collider.attachedRigidbody.GetComponent<PointAttache>().SupprimerObjet();
-                    //Debug.Log(pointAttache.objetCreer);
-                    //for (int i = 0; i < pointAttache.objetCreer.Length; i++)
-                    //{
-                    //    if (pointAttache.objetCreer[i] != null)
-                    //    {
-                    //        if (pointAttache.objetCreer[i] == hit.collider.transform.gameObject)
-                    //        {
-                    //            pointAttache.objetCreer.SetValue(null, i);
-                    //            //Debug.LogError("coucou");
-                    //            //break;
-                    //        }
-                    //    }
-        
-                    //}
-                    //removeObjetFromControlMembre(hit.collider.gameObject);
-                    ////Debug.Log("Je détruit l'objet là hein");
-                    //Destroy(hit.collider.gameObject);
         
                 }
             }

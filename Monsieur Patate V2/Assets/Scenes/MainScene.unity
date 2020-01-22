@@ -4075,6 +4075,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8995801532925487423, guid: 6d22486261ba60c4e88e810c1ed317cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4132,23 +4137,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6168732840650441609, guid: 6d22486261ba60c4e88e810c1ed317cf,
         type: 3}
-      propertyPath: Limbs.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6168732840650441609, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
-      propertyPath: Limbs.Array.data[0]
-      value: 
-      objectReference: {fileID: 1047647253683621919, guid: f5a32f0496cd48f45b6a8ca73658e2d1,
-        type: 3}
-    - target: {fileID: 6168732840650441609, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
-      propertyPath: Limbs.Array.data[1]
-      value: 
-      objectReference: {fileID: 5346473932635713441, guid: 89e05dc2205bcd945a213817115ceba3,
-        type: 3}
-    - target: {fileID: 6168732840650441609, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
       propertyPath: LeftSlot
       value: 
       objectReference: {fileID: 1060878866}
@@ -4172,11 +4160,6 @@ PrefabInstance:
       propertyPath: CenterSlot
       value: 
       objectReference: {fileID: 479896830}
-    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
 --- !u!1 &639093620 stripped
