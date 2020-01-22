@@ -36,7 +36,7 @@ public class poserObjetSurCorps : MonoBehaviour
     [SerializeField] private GameObject DownSlot;
     private SlotScript downSS;
     [SerializeField] private GameObject CenterSlot;
-    private SlotScript centerSS;
+    private CenterSlotScript centerSS;
     
     void Start()
     {
@@ -62,7 +62,11 @@ public class poserObjetSurCorps : MonoBehaviour
         this.chosedLimb = this.Limbs[0];
         
         //UI startup
-        this.centerSS = this.CenterSlot.GetComponent<SlotScript>();
+        this.leftSS = this.LeftSlot.GetComponent<SlotScript>();
+        this.rightSS = this.RightSlot.GetComponent<SlotScript>();
+        this.downSS = this.DownSlot.GetComponent<SlotScript>();
+        this.upSS = this.UpSlot.GetComponent<SlotScript>();
+        this.centerSS = this.CenterSlot.GetComponent<CenterSlotScript>();
     }
 
     // Update is called once per frame
@@ -82,8 +86,6 @@ public class poserObjetSurCorps : MonoBehaviour
 
     private void ChooseLimb() {
         if (OoskaCustom.GetAxisDown("ChooseLimb")) {
-            Debug.Log(Input.GetAxisRaw("ChooseLimb"));
-            
             this.chosedLimbIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseLimb"));
 
             int limbLeftIndex;
@@ -97,11 +99,11 @@ public class poserObjetSurCorps : MonoBehaviour
             this.chosedLimb = this.Limbs[this.chosedLimbIndex];
             Debug.Log(chosedLimb.name);
             
-            ////UI Stuff
-            ////Increment/decrement on the image array
-            //this.leftSS.UpdateIcon(limbLeftIndex);
-            //this.centerSS.UpdateIcon(limbRightIndex);
-            //this.rightSS.UpdateIcon(limbRightIndex);
+            //UI Stuff
+            //Increment/decrement on the image array
+            this.leftSS.UpdateIcon(limbLeftIndex);
+            this.centerSS.UpdateIcon(this.chosedLimbIndex);
+            this.rightSS.UpdateIcon(limbRightIndex);
         }
     }
 
@@ -120,8 +122,16 @@ public class poserObjetSurCorps : MonoBehaviour
         if (OoskaCustom.GetAxisDown("ChooseGroup")) {
             this.chosedGroupIndex += Mathf.RoundToInt(Input.GetAxisRaw("ChooseGroup"));
             this.chosedGroupIndex = ClampIndexInArray(chosedGroupIndex, ControlMembre.numberOfLimb);
-            int otherGroupIndex = ClampIndexInArray(this.chosedGroupIndex + 1, ControlMembre.numberOfLimb);
+            
+            int groupDownIndex = ClampIndexInArray(this.chosedGroupIndex - 1, ControlMembre.numberOfLimb);
+            int groupUpIndex = ClampIndexInArray(this.chosedGroupIndex + 1, ControlMembre.numberOfLimb);
+            
             //UI Stuff
+            //Increment/decrement on the image array
+            
+            this.downSS.UpdateIcon(groupDownIndex);
+            this.centerSS.UpdateIconGroup(this.chosedGroupIndex);
+            this.upSS.UpdateIcon(groupUpIndex);
         }
     }
     private void AddLimb() {
