@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Arcanus\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Arcanus\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Monsieur Patate V2.1766354278.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Arcanus\Documents\GitHub\MonsieurPatate\Monsieur Patate V2" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+    <e p="C:\Users\Arcanis\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Arcanis\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Monsieur Patate V2.1345473778.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Arcanis\Documents\GitHub\MonsieurPatate\Monsieur Patate V2" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Cameras" t="Include">
@@ -20,95 +21,77 @@
             <e p="TargetFieldOfView.cs" t="Include" />
           </e>
         </e>
-        <e p="EasyMainMenu" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="EasyAudioUtility" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="EasyAudioUtility.cs" t="Include" />
-                <e p="EasyAudioUtility_Helper.cs" t="Include" />
-                <e p="EasyAudioUtility_SceneManager.cs" t="Include" />
+        <e p="MainMenu.cs" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="FMOD" t="Include">
+            <e p="addons" t="Include">
+              <e p="ResonanceAudio" t="Include">
                 <e p="Editor" t="Include">
-                  <e p="EasyAudioUtilityEditor.cs" t="Include" />
-                  <e p="eauSceneManagerEditor.cs" t="Include" />
+                  <e p="FmodResonanceAudioRoomEditor.cs" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="FmodResonanceAudio.cs" t="Include" />
+                  <e p="FmodResonanceAudioRoom.cs" t="Include" />
                 </e>
               </e>
             </e>
-            <e p="EasyInputUtility" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="EasyInputUtility.cs" t="Include" />
-                <e p="Editor" t="Include">
-                  <e p="EasyInputUtilityEditor.cs" t="Include" />
-                  <e p="EIU_ControlsMenuEditor.cs" t="Include" />
-                </e>
-                <e p="EIU_AxisBase.cs" t="Include" />
-                <e p="EIU_AxisButton.cs" t="Include" />
-                <e p="EIU_ControlsMenu.cs" t="Include" />
-                <e p="EIU_DebugItem.cs" t="Include" />
-                <e p="EIU_DebugWindow.cs" t="Include" />
-                <e p="EIU_RebindButton.cs" t="Include" />
-              </e>
-            </e>
-            <e p="EasyLoginUtility" t="Include">
-              <e p="LoginManager.cs" t="Include" />
-              <e p="LoginManager_Local.cs" t="Include" />
-              <e p="SignupManager_Local.cs" t="Include" />
-              <e p="SimpleShake.cs" t="Include" />
-            </e>
-            <e p="Editor" t="Include">
-              <e p="EMM_AddCanvases.cs" t="Include" />
-            </e>
-            <e p="FPSCounter.cs" t="Include" />
-            <e p="inGame Scripts" t="Include">
-              <e p="LoadGame Scripts" t="Include">
-                <e p="LoadSlotIdentifier.cs" t="Include" />
-              </e>
-              <e p="PauseMenu" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="PauseMenuOptionsEditor.cs" t="Include" />
-                  <e p="UIControllerEditor.cs" t="Include" />
-                </e>
-                <e p="PauseMenuOptions.cs" t="Include" />
-                <e p="UIController.cs" t="Include" />
-              </e>
-              <e p="SaveGame Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="LoadGameManagerEditor.cs" t="Include" />
-                  <e p="SaveGameTriggerEditor.cs" t="Include" />
-                  <e p="SaveGameUIEditor.cs" t="Include" />
-                </e>
-                <e p="LoadGameManager.cs" t="Include" />
-                <e p="SaveGameTrigger.cs" t="Include" />
-                <e p="SaveGameUI.cs" t="Include" />
-                <e p="SaveSlotIdentifier.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Loading Screen Scripts" t="Include">
+            <e p="src" t="Include">
               <e p="Editor" t="Include">
-                <e p="LoadingScreenEditor.cs" t="Include" />
+                <e p="BankRefDrawer.cs" t="Include" />
+                <e p="CreateEventPopup.cs" t="Include" />
+                <e p="EditorBankRef.cs" t="Include" />
+                <e p="EditorEventRef.cs" t="Include" />
+                <e p="EditorParamRef.cs" t="Include" />
+                <e p="EditorUtils.cs" t="Include" />
+                <e p="EventBrowser.cs" t="Include" />
+                <e p="EventCache.cs" t="Include" />
+                <e p="EventManager.cs" t="Include" />
+                <e p="EventRefDrawer.cs" t="Include" />
+                <e p="FindAndReplace.cs" t="Include" />
+                <e p="LogViewer.cs" t="Include" />
+                <e p="ParamRefDrawer.cs" t="Include" />
+                <e p="SettingsEditor.cs" t="Include" />
+                <e p="StudioBankLoaderEditor.cs" t="Include" />
+                <e p="StudioEventEmitterEditor.cs" t="Include" />
+                <e p="StudioEventEmitterGizmoDrawer.cs" t="Include" />
+                <e p="StudioGlobalParameterTriggerEditor.cs" t="Include" />
+                <e p="StudioListenerEditor.cs" t="Include" />
+                <e p="StudioParameterTriggerEditor.cs" t="Include" />
+                <e p="Timeline" t="Include">
+                  <e p="FMODEventPlayableEditor.cs" t="Include" />
+                </e>
               </e>
-              <e p="Fader.cs" t="Include" />
-              <e p="LoadingScreen.cs" t="Include" />
-            </e>
-            <e p="Main Menu Scripts" t="Include">
-              <e p="Editor" t="Include">
-                <e p="LevelSelectManagerEditor.cs" t="Include" />
-                <e p="MainMenuControllerEditor.cs" t="Include" />
-                <e p="OptionsController_GameEditor.cs" t="Include" />
-                <e p="OptionsController_GraphicsEditor.cs" t="Include" />
+              <e p="Runtime" t="Include">
+                <e p="BankRefAttribute.cs" t="Include" />
+                <e p="EventHandler.cs" t="Include" />
+                <e p="EventRefAttribute.cs" t="Include" />
+                <e p="FMODRuntimeManagerOnGUIHelper.cs" t="Include" />
+                <e p="ParamRef.cs" t="Include" />
+                <e p="ParamRefAttribute.cs" t="Include" />
+                <e p="RuntimeManager.cs" t="Include" />
+                <e p="RuntimeUtils.cs" t="Include" />
+                <e p="Settings.cs" t="Include" />
+                <e p="StudioBankLoader.cs" t="Include" />
+                <e p="StudioEventEmitter.cs" t="Include" />
+                <e p="StudioGlobalParameterTrigger.cs" t="Include" />
+                <e p="StudioListener.cs" t="Include" />
+                <e p="StudioParameterTrigger.cs" t="Include" />
+                <e p="Timeline" t="Include">
+                  <e p="FMODEventPlayable.cs" t="Include" />
+                  <e p="FMODEventTrack.cs" t="Include" />
+                </e>
+                <e p="wrapper" t="Include">
+                  <e p="fmod.cs" t="Include" />
+                  <e p="fmod_android.cs" t="Include" />
+                  <e p="fmod_dsp.cs" t="Include" />
+                  <e p="fmod_errors.cs" t="Include" />
+                  <e p="fmod_studio.cs" t="Include" />
+                </e>
               </e>
-              <e p="LevelSelectItem.cs" t="Include" />
-              <e p="LevelSelectManager.cs" t="Include" />
-              <e p="MainMenu_KeyboardController.cs" t="Include" />
-              <e p="MainMenuController.cs" t="Include" />
-              <e p="OptionsController_Game.cs" t="Include" />
-              <e p="OptionsController_Graphics.cs" t="Include" />
-            </e>
-            <e p="SimpleCube" t="Include">
-              <e p="SimpleCube.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="MainMenu.cs" t="Include" />
+        <e p="Preview.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Body" t="Include">
             <e p="ControlMembre.cs" t="Include" />
