@@ -612,10 +612,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupeColor:
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0, b: 1, a: 1}
+  - {r: 0.14901961, g: 0.6901961, b: 0.61960787, a: 1}
+  - {r: 0.81568635, g: 0.52156866, b: 0.37254903, a: 1}
+  - {r: 0.48235297, g: 0.8705883, b: 0.54509807, a: 1}
+  - {r: 0.79215693, g: 0.37254903, b: 0.5568628, a: 1}
   chosedGroupIndex: 0
   chosedLimbIndex: 0
   afficherLesMembresAuStart: 1
@@ -628,10 +628,12 @@ MonoBehaviour:
   - {fileID: 7584731596532634881, guid: 570d49f199435d743bc194d2d2ecb45c, type: 3}
   - {fileID: 2911928235941676202, guid: a6a43d0dea97cde40930557678f2d2e1, type: 3}
   - {fileID: 3544517195044982970, guid: 0cbad049af54fd443bf7bc3399fbbd2f, type: 3}
-  LeftSlot: {fileID: 0}
-  RightSlot: {fileID: 0}
-  UpSlot: {fileID: 0}
-  DownSlot: {fileID: 0}
+  LeftSlot: {fileID: 4025348526331175114, guid: b0faa5f59ef677a49852a41165133c4e,
+    type: 3}
+  RightSlot: {fileID: 9039672477311256077, guid: 1ec8c3557ee06354eba54006ef3f5f67,
+    type: 3}
+  UpSlot: {fileID: 5516908033934274936, guid: 7d250f8d9b77c124c8022ece6236c570, type: 3}
+  DownSlot: {fileID: 221921079397809487, guid: fc6060be3fbe8954e8e20628831de0b9, type: 3}
   CenterSlot: {fileID: 0}
 --- !u!54 &-6535186370337865369
 Rigidbody:
@@ -4754,11 +4756,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ooska
       objectReference: {fileID: 0}
-    - target: {fileID: -6809749894111791743, guid: 1715d543e59b50040a5348f0d609b323,
+    - target: {fileID: 6646398204452391589, guid: 1715d543e59b50040a5348f0d609b323,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 901e365e94c9c0d4e9ca1e2d375cd11f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1715d543e59b50040a5348f0d609b323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4829,16 +4831,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -6809749894111791743, guid: 1715d543e59b50040a5348f0d609b323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 901e365e94c9c0d4e9ca1e2d375cd11f, type: 2}
     - target: {fileID: -1389157037694621049, guid: 1715d543e59b50040a5348f0d609b323,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 88bdd4f14ed9a0f418729c8942a3079c, type: 2}
-    - target: {fileID: 6646398204452391589, guid: 1715d543e59b50040a5348f0d609b323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1715d543e59b50040a5348f0d609b323, type: 3}
 --- !u!4 &4900228838270824627 stripped
