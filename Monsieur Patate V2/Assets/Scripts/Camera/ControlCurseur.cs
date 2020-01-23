@@ -15,13 +15,6 @@ public class ControlCurseur : MonoBehaviour
         curseur = GetComponent<RectTransform>();
     }
     
-    private void LateUpdate()
-    {
-        if (Input.GetButtonDown("PauseButton"))
-        {
-            curseur.localPosition = new Vector3(0,0,0);
-        }
-    }
     void Update() {
         horizontalCursorInput = Input.GetAxis("HorizontalCursor");
         verticalCursorInput = Input.GetAxis("VerticalCursor");
@@ -33,6 +26,11 @@ public class ControlCurseur : MonoBehaviour
         
         curseur.Translate(cursorVelocity * Time.unscaledDeltaTime);
         positionCurseur = this.curseur.position;
+
+        if (Input.GetButtonDown("PauseButton"))
+        {
+            curseur.localPosition = new Vector3(0, 0, 0);
+        }
     }
 
     int InputArrondi(float x, float threeshold = 0.01f)
