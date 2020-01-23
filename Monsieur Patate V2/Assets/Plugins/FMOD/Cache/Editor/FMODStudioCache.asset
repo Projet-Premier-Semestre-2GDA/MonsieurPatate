@@ -14,12 +14,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/SoundDesignFmod/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637154150319104003
+  lastModified: 637154216545436737
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 828
   Exists: 1
+--- !u!114 &-2852286497961161292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637154216545336979
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1650461849206347409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637154173011241488
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-75056607356652236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637154188631149560
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,17 +88,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3594812962617486288}
-  - {fileID: 4929883821927941821}
+  - {fileID: -2852286497961161292}
   EditorEvents:
   - {fileID: 7267512300471446041}
   - {fileID: 5125124365665823362}
   - {fileID: 1940028458639713649}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4929883821927941821}
+  - {fileID: -2852286497961161292}
   StringsBanks:
   - {fileID: -3594812962617486288}
-  stringsBankWriteTime: 637154150319104003
+  stringsBankWriteTime: 637154216545436737
   cacheVersion: 3
 --- !u!114 &1940028458639713649
 MonoBehaviour:
@@ -61,7 +115,7 @@ MonoBehaviour:
   Path: event:/Collision
   guid: e89d3d5352f84b4282a2ea8fa32c0ee6
   Banks:
-  - {fileID: 4929883821927941821}
+  - {fileID: -2852286497961161292}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -86,7 +140,7 @@ MonoBehaviour:
   lastModified: 637154150319084010
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5125124365665823362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +156,7 @@ MonoBehaviour:
   Path: event:/BoingFritte
   guid: d0928b916e25cf4d9565ea24dc49ec4c
   Banks:
-  - {fileID: 4929883821927941821}
+  - {fileID: -2852286497961161292}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -125,7 +179,7 @@ MonoBehaviour:
   Path: event:/toboggan
   guid: 8efe36b861cb374997111b5b51413c28
   Banks:
-  - {fileID: 4929883821927941821}
+  - {fileID: -2852286497961161292}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

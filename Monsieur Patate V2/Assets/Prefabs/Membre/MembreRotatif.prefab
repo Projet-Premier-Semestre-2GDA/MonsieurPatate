@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2990d19dc1ea9749a2b62dd61464a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathToSound: event:/Membre/Rotatif
   groupeMembre: -1
   rbParent: {fileID: 0}
   typeDeForceAppliquee: 2

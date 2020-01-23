@@ -48,7 +48,7 @@ public class MembreExtender : Membre
 
     public override void Action(float analogiqueReturn = 1)
     {
-        base.Action();
+        base.Action(analogiqueReturn);
         if (!movingPart.activeSelf)
         {
             movingPart.SetActive(true);
