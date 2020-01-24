@@ -59,4 +59,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 #Fmod
-/#[Aa]ssets/SoundDesignFmod/.cache/
+/[Aa]ssets/SoundDesignFmod/.cache/
+/[Aa]ssets/SoundDesignFmod/.unsaved/
+/[Aa]ssets/SoundDesignFmod/.user/
