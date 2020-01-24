@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7640894016873503836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MembreCollant
+  m_EditorClassIdentifier: 
+  Path: event:/MembreCollant
+  guid: 1ee77d7e9c58d740bb824b4b606f500d
+  Banks:
+  - {fileID: -2137158433447110945}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &-5658570104581493838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MembreRotatif
+  m_EditorClassIdentifier: 
+  Path: event:/MembreRotatif
+  guid: 21354d553cfaf6448f1e13ee54f88c80
+  Banks:
+  - {fileID: -2137158433447110945}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3500
 --- !u!114 &-3594812962617486288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,11 +60,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/SoundDesignFmod/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637154216545436737
+  lastModified: 637154313380905579
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 828
+    Value: 958
   Exists: 1
 --- !u!114 &-2852286497961161292
 MonoBehaviour:
@@ -35,6 +81,24 @@ MonoBehaviour:
   Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637154216545336979
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2137158433447110945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637154313380895585
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -88,17 +152,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3594812962617486288}
-  - {fileID: -2852286497961161292}
+  - {fileID: -2137158433447110945}
   EditorEvents:
   - {fileID: 7267512300471446041}
   - {fileID: 5125124365665823362}
   - {fileID: 1940028458639713649}
+  - {fileID: -7640894016873503836}
+  - {fileID: -5658570104581493838}
+  - {fileID: 9180744348411256674}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2852286497961161292}
+  - {fileID: -2137158433447110945}
   StringsBanks:
   - {fileID: -3594812962617486288}
-  stringsBankWriteTime: 637154216545436737
+  stringsBankWriteTime: 637154313380905579
   cacheVersion: 3
 --- !u!114 &1940028458639713649
 MonoBehaviour:
@@ -115,7 +182,7 @@ MonoBehaviour:
   Path: event:/Collision
   guid: e89d3d5352f84b4282a2ea8fa32c0ee6
   Banks:
-  - {fileID: -2852286497961161292}
+  - {fileID: -2137158433447110945}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -156,7 +223,7 @@ MonoBehaviour:
   Path: event:/BoingFritte
   guid: d0928b916e25cf4d9565ea24dc49ec4c
   Banks:
-  - {fileID: -2852286497961161292}
+  - {fileID: -2137158433447110945}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -164,6 +231,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5500
+--- !u!114 &5809224380384603663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637154286289265963
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &7267512300471446041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +264,7 @@ MonoBehaviour:
   Path: event:/toboggan
   guid: 8efe36b861cb374997111b5b51413c28
   Banks:
-  - {fileID: -2852286497961161292}
+  - {fileID: -2137158433447110945}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -187,3 +272,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7789
+--- !u!114 &9180744348411256674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MembreExtend
+  m_EditorClassIdentifier: 
+  Path: event:/MembreExtend
+  guid: 73df864c77f0784ca5f072cd2fb31c90
+  Banks:
+  - {fileID: -2137158433447110945}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
