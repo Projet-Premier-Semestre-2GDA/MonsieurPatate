@@ -23385,10 +23385,6 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 2083176361}
-    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
-      propertyPath: m_AutoTargetPlayer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_ClearFlags
       value: 1
