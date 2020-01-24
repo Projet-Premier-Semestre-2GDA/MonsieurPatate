@@ -198,8 +198,8 @@ MonoBehaviour:
     type: 3}
   m_AutoTargetPlayer: 0
   m_UpdateType: 0
-  m_MoveSpeed: 15
-  m_TurnSpeed: 1
+  m_MoveSpeed: 30
+  m_TurnSpeed: 2.8
   m_TurnSmoothing: 5
   m_TiltMax: 45
   m_TiltMin: 45
