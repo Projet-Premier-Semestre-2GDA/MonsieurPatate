@@ -2,6 +2,7 @@
 
 public class Membre : MonoBehaviour
 {
+    public string pathToSound = "event:/Membre/";
     // ceci est une nouvelle classe pour mes membre
     [HideInInspector]public int groupeMembre = -1;
     //public ForceMode typeDeForceAppliquee = ForceMode.Force;
@@ -33,6 +34,7 @@ public class Membre : MonoBehaviour
         {
             analogiqueReturn = 0;
         }
+        FMODUnity.RuntimeManager.PlayOneShot(pathToSound);
     }
     public virtual void NonAction()
     {

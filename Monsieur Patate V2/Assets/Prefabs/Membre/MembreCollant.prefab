@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6262bffbc36d148be558c2a710ab48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathToSound: event:/Membre/Collant
   groupeMembre: -1
   rbParent: {fileID: 0}
   puissanceBras: 5

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{67bb21a1-c0c2-4384-9112-753c7bb05998}">
+		<property name="assetPath">
+			<value>Collision.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>21.819591836734695</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{384e2607-2553-415d-be32-7726d9188fe9}</destination>
+		</relationship>
+	</object>
+</objects>

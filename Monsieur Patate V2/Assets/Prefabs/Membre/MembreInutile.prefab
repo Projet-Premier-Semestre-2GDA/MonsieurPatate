@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e92d6c00816c6140aa7ec5e982cd0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathToSound: event:/Membre/Inutile
   groupeMembre: -1
   rbParent: {fileID: 0}
 --- !u!1 &8812575264518938829

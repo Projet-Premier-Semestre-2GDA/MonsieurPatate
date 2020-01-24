@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e92d6c00816c6140aa7ec5e982cd0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathToSound: event:/Membre/Glissant
   groupeMembre: -1
   rbParent: {fileID: 0}
 --- !u!1001 &5555719835480012968
