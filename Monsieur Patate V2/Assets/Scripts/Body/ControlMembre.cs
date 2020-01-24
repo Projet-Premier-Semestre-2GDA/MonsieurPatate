@@ -30,18 +30,22 @@ public class ControlMembre : MonoBehaviour
     void Update()
     {
         //Utilisation des membre en fonction de si l'on relache les bouton ou non
-        for (int i = 0; i < numberOfLimb; i++)
+        if (!PauseScript.isGamePaused)
         {
-            
-            if (UseButtonDown("ActionGroupe" + (i + 1)))
+            for (int i = 0; i < numberOfLimb; i++)
             {
-                UtilisationGroupeMembre(i);
-            }
-            if (UseButtonUp("ActionGroupe" + (i + 1)))
-            {
-                NonUtilisationGroupeMembre(i);
+
+                if (UseButtonDown("ActionGroupe" + (i + 1)))
+                {
+                    UtilisationGroupeMembre(i);
+                }
+                if (UseButtonUp("ActionGroupe" + (i + 1)))
+                {
+                    NonUtilisationGroupeMembre(i);
+                }
             }
         }
+        
 
         
 

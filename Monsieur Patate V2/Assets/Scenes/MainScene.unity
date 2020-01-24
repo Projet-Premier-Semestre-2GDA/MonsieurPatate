@@ -8430,6 +8430,11 @@ MonoBehaviour:
   IconsArray:
   - {fileID: 21300000, guid: d873f1308057bfb43ba21aae1e368f17, type: 3}
   - {fileID: 21300000, guid: 9346676c67da3e54b997810f1a085f2d, type: 3}
+  - {fileID: 21300000, guid: 1da60a1d9a8050f408cd1494475a9f57, type: 3}
+  - {fileID: 21300000, guid: 167acf9d3bb422c4892d5a8023a45c16, type: 3}
+  - {fileID: 21300000, guid: 67f5a2d35b444464194f02a3d8979b99, type: 3}
+  - {fileID: 21300000, guid: b791a82e8fe12414aa4bfc2c93d52848, type: 3}
+  - {fileID: 21300000, guid: 094962291451d354897e0f63403897dd, type: 3}
   groupIcon: {fileID: 0}
   GroupIconsArray:
   - {fileID: 21300000, guid: d8544fda1aa40154aabd30466b378913, type: 3}
@@ -11515,16 +11520,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Body
-      objectReference: {fileID: 0}
-    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6535186370337865369, guid: 6d22486261ba60c4e88e810c1ed317cf,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8995801532925487423, guid: 6d22486261ba60c4e88e810c1ed317cf,
         type: 3}
@@ -26400,7 +26395,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1440919651
 MonoBehaviour:
