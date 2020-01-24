@@ -76,12 +76,13 @@ public class poserObjetSurCorps : MonoBehaviour
     void Update() {
         
         
-        //Sélection des membres et groupes
-        ChooseLimb();
-        ChooseGroup();
+        
 
         //--------------------------------------Ajout d'un membre ou suppression d'un membre--------------------------------------
         if (PauseScript.isGamePaused) {
+            //Sélection des membres et groupes
+            ChooseLimb();
+            ChooseGroup();
             AddLimb();
             RemoveLimb();
         }
@@ -169,8 +170,7 @@ public class poserObjetSurCorps : MonoBehaviour
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
                 Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
-                if (hit.collider.attachedRigidbody.tag == "membre")
-                {
+                if (hit.collider.attachedRigidbody.tag == "membre") {
                     hit.collider.attachedRigidbody.GetComponent<PointAttache>().SupprimerObjet();
         
                 }
