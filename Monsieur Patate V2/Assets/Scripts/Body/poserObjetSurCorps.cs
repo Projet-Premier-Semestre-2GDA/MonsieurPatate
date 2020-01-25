@@ -151,7 +151,7 @@ public class poserObjetSurCorps : MonoBehaviour
 
             Debug.DrawRay(ray.origin, ray.direction * 50, Color.white);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50f,layerMask: LayerMask.GetMask("BodyLayer")))
+            if (Physics.Raycast(ray, out hit, 50f,layerMask: LayerMask.GetMask("BodyLayer", "BodyLimbLayer")))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
                 //Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
@@ -174,7 +174,7 @@ public class poserObjetSurCorps : MonoBehaviour
 
             Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50f,layerMask: LayerMask.GetMask("BodyLayer")))
+            if (Physics.Raycast(ray, out hit, 50f,layerMask: LayerMask.GetMask("BodyLayer","BodyLimbLayer")))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
                 Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
@@ -190,7 +190,7 @@ public class poserObjetSurCorps : MonoBehaviour
 
     private void PutLimb(Vector3 pointChoose, GameObject membreParent)
     {
-        PointAttache pointAttacheParent = membreParent.GetComponent<PointAttache>();
+        PointAttache pointAttacheParent = GetPointAttach(membreParent);
         Transform transformChoose = FindNearestPoint(pointChoose, pointAttacheParent.listePointAttache);
         //creation du membre
         GameObject membreEnfant = Instantiate(this.chosedLimb, transformChoose);
@@ -205,7 +205,8 @@ public class poserObjetSurCorps : MonoBehaviour
         pointAttacheParent.SetEnfant(transformChoose, membreEnfant);
         //Control du membre
         GetComponent<ControlMembre>().AddMembre(scriptMembreEnfant, this.chosedGroupIndex);
-        scriptMembreEnfant.rbParent = membreParent.GetComponent<Rigidbody>();
+        //Set le rbParent (a été annulé car il est maintenant fais dans le script du point d'attache membreParent
+        //scriptMembreEnfant.rbParent = membreParent.GetComponent<Rigidbody>();
     }
 
     public Transform FindNearestPoint(Vector3 pointCompare, GameObject[] arrayTest)
@@ -227,6 +228,22 @@ public class poserObjetSurCorps : MonoBehaviour
             }
         }
         return nearestPoint;
+    }
+
+    public PointAttache GetPointAttach(GameObject membreParent)
+    {
+        PointAttache pointAttacheParent;
+
+        if (membreParent.GetComponent<PointAttache>() == null)
+        {
+            pointAttacheParent = membreParent.GetComponentInParent<PointAttache>();
+        }
+        else
+        {
+            pointAttacheParent = membreParent.GetComponent<PointAttache>();
+        }
+
+        return pointAttacheParent;
     }
 
 }

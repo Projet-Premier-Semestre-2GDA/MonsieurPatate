@@ -5,7 +5,17 @@ using UnityEngine;
 public class MembreTournant : MembreAForce
 {
     public GameObject turnObject;
+    HingeJoint hinge;
+    Rigidbody rbOther;
     private bool turn = false;
+
+    public override void Start()
+    {
+        base.Start();
+        hinge = turnObject.GetComponent<HingeJoint>();
+        rbOther = turnObject.GetComponent<Rigidbody>();
+    }
+
     public override void Action(float analogiqueReturn = 1)
     {
         base.Action(analogiqueReturn);
@@ -21,9 +31,10 @@ public class MembreTournant : MembreAForce
     }
     private void FixedUpdate()
     {
-        if (turn)
+        hinge.useMotor = turn;
+        if (!turn)
         {
-            TurnObject(turnObject);
+            rbOther.angularVelocity = new Vector3();            
         }
     }
 
