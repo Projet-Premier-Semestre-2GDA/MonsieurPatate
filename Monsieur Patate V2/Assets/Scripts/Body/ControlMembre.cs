@@ -110,6 +110,8 @@ public class ControlMembre : MonoBehaviour
     public void AddMembre(Membre membreAAjouter,int groupeDAppartenance)
     {
         arrayGroupLimb[groupeDAppartenance].Add(membreAAjouter);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Mettre Membre");
+        
     }
 
     public void RemoveMembre(Membre membreAEnlever)

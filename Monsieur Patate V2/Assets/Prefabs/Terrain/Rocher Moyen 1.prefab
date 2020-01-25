@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3076421906994312529}
   - component: {fileID: 8758705261254527400}
   - component: {fileID: 6949829876804441571}
+  - component: {fileID: -3119904416620251419}
   m_Layer: 0
   m_Name: Rocher Moyen 1
   m_TagString: Untagged
@@ -90,6 +91,18 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -4715642113876736137, guid: eb4a6525144f5c74da0a13ad7e4f7fc0, type: 3}
+--- !u!114 &-3119904416620251419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039682618664287604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45214bf7e535f84aaa1476c58cc84c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
