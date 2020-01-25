@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 6962022644394759122}
   - component: {fileID: 2668807288640785626}
   - component: {fileID: 8502272445527490002}
+  - component: {fileID: 4420622707570836214}
   m_Layer: 8
   m_Name: Body
   m_TagString: Player
@@ -944,6 +945,24 @@ CapsuleCollider:
   m_Height: 1.57
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4420622707570836214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424609149745369368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3ac4c9f0bb9f04789f72cd3a4b5b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.4
+  timeBetweenBlinksMin: 3
+  timeBetweenBlinksMax: 4.5
+  blinkDuration: 0.2
+  eye1: {fileID: 2090565328}
+  eye2: {fileID: 172357468}
 --- !u!1 &2581970947869117549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,6 +4976,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8995801532925487423}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 1715d543e59b50040a5348f0d609b323,
+        type: 3}
+      propertyPath: m_Name
+      value: ooska
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1715d543e59b50040a5348f0d609b323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5026,11 +5050,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 1715d543e59b50040a5348f0d609b323,
-        type: 3}
-      propertyPath: m_Name
-      value: ooska
       objectReference: {fileID: 0}
     - target: {fileID: -6809749894111791743, guid: 1715d543e59b50040a5348f0d609b323,
         type: 3}
