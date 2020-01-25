@@ -146,7 +146,7 @@ public class poserObjetSurCorps : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 50f))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
+                //Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
         
                 if (hit.collider.attachedRigidbody.CompareTag("Player") || hit.collider.attachedRigidbody.CompareTag(this.limbTag))

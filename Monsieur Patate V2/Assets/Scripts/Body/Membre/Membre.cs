@@ -17,7 +17,7 @@ public class Membre : MonoBehaviour
     public virtual void Start()
     {
         
-        Debug.Log("j'existe");
+        //Debug.Log("j'existe");
         //rb = GetComponentInParent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
         joint = GetComponent<FixedJoint>();
@@ -29,7 +29,7 @@ public class Membre : MonoBehaviour
 
     public virtual void Action(float analogiqueReturn = 1) //corresponds a la première touche d'action, généralement un mouvement
     {
-        Debug.Log(transform.name + " of the group " + groupeMembre + " make the first action with an intensity of " + analogiqueReturn);
+        //Debug.Log(transform.name + " of the group " + groupeMembre + " make the first action with an intensity of " + analogiqueReturn);
         if (Time.timeScale == 0)
         {
             analogiqueReturn = 0;
@@ -38,7 +38,7 @@ public class Membre : MonoBehaviour
     }
     public virtual void NonAction()
     {
-        Debug.Log(this.name + " undo an action");
+        //Debug.Log(this.name + " undo an action");
     }
 
     public void SetMembreColor(Color colorToSet)
