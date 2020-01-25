@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5836266795602274836}
   - component: {fileID: 6726549848598852719}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MembreMouvant
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4769868557026192600}
   - component: {fileID: 3025672393318661657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Attache (1)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4534834315010640963}
   - component: {fileID: 355799011410994169}
   - component: {fileID: 6098124102668138016}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MembreExtender
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5346473933537403293}
   - component: {fileID: 6207862986155684051}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Collider
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2490743634676423690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Objectif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 2553042457636222084}
   - component: {fileID: 287124215543131259}
   - component: {fileID: 5078565885043128498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346677579338557988}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 8815207593440992409}
   - component: {fileID: 1358345289120497071}
   - component: {fileID: 4566519506685709247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3654376768446940167}
   - component: {fileID: 6968988298134074056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Attache (2)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}

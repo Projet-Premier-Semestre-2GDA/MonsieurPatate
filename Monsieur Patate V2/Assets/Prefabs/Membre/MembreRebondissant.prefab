@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1163921438685049125}
   - component: {fileID: 8884028861663352441}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,9 +55,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6917352724956819407}
   - component: {fileID: 955942518235256741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Sph\xE8re"
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3168155794917053948}
   - component: {fileID: 6143771791967754227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
-  m_TagString: pointAttache
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,9 +142,9 @@ GameObject:
   m_Component:
   - component: {fileID: 558236518514423655}
   - component: {fileID: 5559045310803640767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
-  m_TagString: pointAttache
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: -2930399374705100130}
   - component: {fileID: 1492174667546316200}
   - component: {fileID: 8988022128724994766}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MembreRebondissant
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -293,6 +293,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rebondissant2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992041862456829583, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992041862456829583, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: -3592086988872549945, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3592086988872549945, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583927446293882072, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583927446293882072, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6d68b24f9b9be3044ae3d65207afc3d7,
         type: 3}

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7438150501709399073}
   - component: {fileID: 410812838475971551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,9 +55,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9143665383779244210}
   - component: {fileID: 8956750218442892224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,9 @@ GameObject:
   m_Component:
   - component: {fileID: 706737109124398563}
   - component: {fileID: 6117973460416911274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3544517194032823374}
   - component: {fileID: 3544517194032823375}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: point attache (3)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3544517194093549319}
   - component: {fileID: 3544517194093549316}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: point attache (1)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3544517194834018434}
   - component: {fileID: 3544517194834018435}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: point attache (2)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 3544517195044982968}
   - component: {fileID: 3544517195044982971}
   - component: {fileID: 8404518943269930725}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MembreTrepied
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -388,9 +388,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1574271181259605491}
   - component: {fileID: 4186379249055327829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,6 +433,86 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Tr\xE9pied"
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849693675226541414, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849693675226541414, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: -2288123245004154795, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -2288123245004154795, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: -1287320646942759845, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1287320646942759845, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: -3579061457715186136, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3579061457715186136, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542678754970606356, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542678754970606356, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314606118951793031, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314606118951793031, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
+      objectReference: {fileID: 0}
+    - target: {fileID: -6313755735299834631, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6313755735299834631, guid: 6bdd555bff907c7449b54638ef7b582d,
+        type: 3}
+      propertyPath: m_TagString
+      value: membre
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6bdd555bff907c7449b54638ef7b582d,
         type: 3}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6482622526523941559}
   - component: {fileID: 6810962537786410414}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Point attache (1)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: -54021116660970809}
   - component: {fileID: 8724151277047249260}
   - component: {fileID: 7966090341561425843}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MembreCollant
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3368205119507938530}
   - component: {fileID: 73113877241506002}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Collider
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -220,9 +220,9 @@ GameObject:
   - component: {fileID: 221797535717976795}
   - component: {fileID: 8154005239902816615}
   - component: {fileID: 2984137865393080711}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: PetitJoint
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 6990262616703145348}
   - component: {fileID: 1082965722278007747}
   - component: {fileID: 5364122196905370027}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: membre
   m_Icon: {fileID: 0}
@@ -483,9 +483,9 @@ GameObject:
   - component: {fileID: 4020598158043178093}
   - component: {fileID: 2968565531359103342}
   - component: {fileID: 5902665558479705203}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,9 +559,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4172822897151931389}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -596,9 +596,9 @@ GameObject:
   - component: {fileID: 5460100921833103152}
   - component: {fileID: 2518779377872637487}
   - component: {fileID: 8172549780641417908}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sphere001
-  m_TagString: Untagged
+  m_TagString: membre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,7 +701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 746952478692370949}
   - component: {fileID: 1415841636960861665}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Point attache (2)
   m_TagString: pointAttache
   m_Icon: {fileID: 0}
