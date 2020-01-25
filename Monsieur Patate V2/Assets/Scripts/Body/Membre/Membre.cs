@@ -17,7 +17,7 @@ public class Membre : MonoBehaviour
     public virtual void Start()
     {
         
-        Debug.Log("j'existe");
+        //Debug.Log("j'existe");
         //rb = GetComponentInParent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
         joint = GetComponent<FixedJoint>();
@@ -34,7 +34,7 @@ public class Membre : MonoBehaviour
         {
             analogiqueReturn = 0;
         }
-        FMODUnity.RuntimeManager.PlayOneShot(pathToSound);
+        //FMODUnity.RuntimeManager.PlayOneShot(pathToSound);
     }
     public virtual void NonAction()
     {

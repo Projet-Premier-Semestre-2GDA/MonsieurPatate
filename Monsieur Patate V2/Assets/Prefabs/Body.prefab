@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1185461886920818062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ GameObject:
   - component: {fileID: 8243581896456161315}
   m_Layer: 8
   m_Name: point attache 7
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8243581896456161315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4929110091521651420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +230,7 @@ GameObject:
   - component: {fileID: 8772878143133898447}
   m_Layer: 8
   m_Name: point attache 4
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,6 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8772878143133898447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1206071325488144688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +374,7 @@ GameObject:
   - component: {fileID: 5711440579114046096}
   m_Layer: 8
   m_Name: point attache 21
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -413,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &5711440579114046096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &3640698449482631141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,6 +821,7 @@ GameObject:
   - component: {fileID: 2668807288640785626}
   - component: {fileID: 8502272445527490002}
   - component: {fileID: 4420622707570836214}
+  - component: {fileID: 4719771021405424663}
   m_Layer: 8
   m_Name: Body
   m_TagString: Player
@@ -935,6 +943,7 @@ MonoBehaviour:
   - {fileID: 7584731596532634881, guid: 570d49f199435d743bc194d2d2ecb45c, type: 3}
   - {fileID: 2911928235941676202, guid: a6a43d0dea97cde40930557678f2d2e1, type: 3}
   - {fileID: 3544517195044982970, guid: 0cbad049af54fd443bf7bc3399fbbd2f, type: 3}
+  chosedLimb: {fileID: 0}
   LeftSlot: {fileID: 0}
   RightSlot: {fileID: 0}
   UpSlot: {fileID: 0}
@@ -1053,6 +1062,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  attachRigidBody:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   parent: {fileID: 0}
   tagPointAttache: pointAttache
 --- !u!135 &6962022644394759122
@@ -1113,6 +1129,22 @@ MonoBehaviour:
   blinkDuration: 0.2
   eye1: {fileID: 933210157069697054}
   eye2: {fileID: 6134377988250163128}
+--- !u!114 &4719771021405424663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424609149745369368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da11137cffbf4e42b0b76e7f857bcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialPreview: {fileID: 2100000, guid: 5dc19d63e86cfd74b9a87b8378178294, type: 2}
+  tauxDeTransparence: 0.6
+  tagPreview: membrePreview
+  previewObject: {fileID: 0}
 --- !u!1 &2581970947869117549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1159,7 @@ GameObject:
   - component: {fileID: 4727411218068731205}
   m_Layer: 8
   m_Name: point attache 23
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1171,6 +1203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4727411218068731205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,7 +1231,7 @@ GameObject:
   - component: {fileID: 6667309981929328769}
   m_Layer: 8
   m_Name: point attache 12
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1242,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &6667309981929328769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,6 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &6472049592628273736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,6 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4751338930601814789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1455,6 +1491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4558957612074714610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,7 +1519,7 @@ GameObject:
   - component: {fileID: 6828574370686846537}
   m_Layer: 8
   m_Name: point attache 3
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1526,6 +1563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &6828574370686846537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1627,6 +1665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7492660303411792293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1654,7 +1693,7 @@ GameObject:
   - component: {fileID: 147383776164221125}
   m_Layer: 8
   m_Name: point attache 5
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1698,6 +1737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &147383776164221125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,7 +1765,7 @@ GameObject:
   - component: {fileID: 9145032217874087161}
   m_Layer: 8
   m_Name: point attache 20
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1769,6 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &9145032217874087161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,6 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &6012628290581959864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1911,6 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1986533596080387817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1938,7 +1981,7 @@ GameObject:
   - component: {fileID: 966669468091671569}
   m_Layer: 8
   m_Name: point attache 18
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1982,6 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &966669468091671569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,7 +2053,7 @@ GameObject:
   - component: {fileID: 5909896877260621135}
   m_Layer: 8
   m_Name: point attache 17
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,6 +2097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &5909896877260621135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2124,6 +2169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8675011052175980349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2151,7 +2197,7 @@ GameObject:
   - component: {fileID: 1675641266515184875}
   m_Layer: 8
   m_Name: point attache 14
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2195,6 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1675641266515184875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,6 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7827526070565145058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2371,7 +2419,7 @@ GameObject:
   - component: {fileID: 8101940350993551946}
   m_Layer: 8
   m_Name: point attache 2
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2415,6 +2463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8101940350993551946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2442,7 +2491,7 @@ GameObject:
   - component: {fileID: 752356862655470039}
   m_Layer: 8
   m_Name: point attache 22
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2486,6 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &752356862655470039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,7 +2563,7 @@ GameObject:
   - component: {fileID: 3861729602160762712}
   m_Layer: 8
   m_Name: point attache 24
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2557,6 +2607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &3861729602160762712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,7 +2635,7 @@ GameObject:
   - component: {fileID: 4326549640523008364}
   m_Layer: 8
   m_Name: point attache 28
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2628,6 +2679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4326549640523008364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2699,6 +2751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4795903912707001424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2770,6 +2823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &5372146985358809784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,7 +2851,7 @@ GameObject:
   - component: {fileID: 5639622611871384341}
   m_Layer: 8
   m_Name: point attache 16
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2841,6 +2895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &5639622611871384341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,6 +2967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &3661254576017312358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2983,6 +3039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7874432340159618307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3054,6 +3111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8906230679398557444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3081,7 +3139,7 @@ GameObject:
   - component: {fileID: 8898832229249340980}
   m_Layer: 8
   m_Name: point attache 25
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3125,6 +3183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8898832229249340980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3152,7 +3211,7 @@ GameObject:
   - component: {fileID: 4820435471198460020}
   m_Layer: 8
   m_Name: point attache 13
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3196,6 +3255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4820435471198460020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3223,7 +3283,7 @@ GameObject:
   - component: {fileID: 8127694394943036823}
   m_Layer: 8
   m_Name: point attache 9
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3267,6 +3327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8127694394943036823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3338,6 +3399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1268315279312496694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,6 +3471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8275036110816591647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3436,7 +3499,7 @@ GameObject:
   - component: {fileID: 1336195322256000691}
   m_Layer: 8
   m_Name: point attache 11
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3480,6 +3543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1336195322256000691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3507,7 +3571,7 @@ GameObject:
   - component: {fileID: 4458103283190863980}
   m_Layer: 8
   m_Name: point attache 26
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3551,6 +3615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4458103283190863980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3622,6 +3687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &497277214371773113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3649,7 +3715,7 @@ GameObject:
   - component: {fileID: 1990649035214563163}
   m_Layer: 8
   m_Name: point attache 1
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3693,6 +3759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &1990649035214563163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3764,6 +3831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &6112403727428025100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3913,6 +3981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8058197716677348497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,6 +4131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7257456257362400339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4133,6 +4203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4886602014222173254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4204,6 +4275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4314798488376675993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4231,7 +4303,7 @@ GameObject:
   - component: {fileID: 8219621641220254171}
   m_Layer: 8
   m_Name: point attache 15
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4275,6 +4347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8219621641220254171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4346,6 +4419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8979178153000106146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4417,6 +4491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4806749561869707574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4441,7 +4516,7 @@ GameObject:
   - component: {fileID: 8788122331584407619}
   m_Layer: 8
   m_Name: CenterObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4518,6 +4593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &6442783307125634654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4620,6 +4696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &569431307682259426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4647,7 +4724,7 @@ GameObject:
   - component: {fileID: 538657812234566384}
   m_Layer: 8
   m_Name: point attache 19
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4691,6 +4768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &538657812234566384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4762,6 +4840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &5832338492083271748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4789,7 +4868,7 @@ GameObject:
   - component: {fileID: 2967660529492355295}
   m_Layer: 8
   m_Name: point attache 8
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4833,6 +4912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &2967660529492355295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4904,6 +4984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &4355197821973592457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4975,6 +5056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &990129140942262254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5002,7 +5084,7 @@ GameObject:
   - component: {fileID: 3819199439413543880}
   m_Layer: 8
   m_Name: point attache 10
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5046,6 +5128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &3819199439413543880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5117,6 +5200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &3457023070659231583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5266,6 +5350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &8472939867136688291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5337,6 +5422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7802721663188115658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,6 +5494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7161307534705443513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5435,7 +5522,7 @@ GameObject:
   - component: {fileID: 7305513027664681482}
   m_Layer: 8
   m_Name: point attache 27
-  m_TagString: pointAttache
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5479,6 +5566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db53399ccccf04b9f00d69dff878b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachRigibody: {fileID: 0}
 --- !u!114 &7305513027664681482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5499,16 +5587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8995801532925487423}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_Name
-      value: paupiere (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5578,6 +5656,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.3919716
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_Name
+      value: paupiere (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}
@@ -5700,21 +5788,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8995801532925487423}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_Name
-      value: paupiere
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5784,6 +5857,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.3919716
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_Name
+      value: paupiere
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}

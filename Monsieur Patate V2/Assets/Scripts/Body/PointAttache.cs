@@ -7,6 +7,7 @@ public class PointAttache : MonoBehaviour
     [SerializeField] private bool automaticSearch = true;
     public GameObject[] listePointAttache = new GameObject[6];
     public GameObject[] objetCreer = new GameObject[6];
+    public Rigidbody[] attachRigidBody = new Rigidbody[6];
     [HideInInspector]public GameObject parent;
 
     public string tagPointAttache = "pointAttache";
@@ -26,10 +27,19 @@ public class PointAttache : MonoBehaviour
     {
         FindAttachPoint[] attachPointList = GetComponentsInChildren<FindAttachPoint>();
         listePointAttache = new GameObject[attachPointList.Length];
+        attachRigidBody = new Rigidbody[attachPointList.Length];
         {
             for (int i = 0; i < attachPointList.Length; i++)
             {
                 listePointAttache[i] = attachPointList[i].gameObject;
+                if (attachPointList[i].attachRigibody != null)
+                {
+                    attachRigidBody[i] = attachPointList[i].attachRigibody;
+                }
+                else
+                {
+                    attachRigidBody[i] = GetComponent<Rigidbody>();
+                }
             }
         }
     }
@@ -88,6 +98,7 @@ public class PointAttache : MonoBehaviour
             enfant.transform.parent = transformCible;
             enfant.transform.position = transformCible.position;
             enfant.transform.rotation = transformCible.rotation;
+            enfant.GetComponent<Membre>().rbParent = attachRigidBody[indexChoosen];
         }
 
             return true;

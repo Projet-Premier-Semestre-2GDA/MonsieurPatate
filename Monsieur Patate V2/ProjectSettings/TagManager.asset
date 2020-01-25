@@ -9,6 +9,7 @@ TagManager:
   - sol
   - UI
   - canJump
+  - membrePreview
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Wall
   - BodyLimbPlusLayer
   - PostProcessing
-  - 
+  - Preview
   - 
   - 
   - 

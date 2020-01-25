@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Preview : MonoBehaviour {
 
-    public static bool activated = true;
+    public static bool activated = false;
     public float radius = 0.1f;
     private void OnDrawGizmos() {
         if (activated) {

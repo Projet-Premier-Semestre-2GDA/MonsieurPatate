@@ -24,10 +24,11 @@ public class poserObjetSurCorps : MonoBehaviour
 
     //public GameObject[] ObjetCreer = new GameObject[6];
     
-    private GameObject chosedLimb;
+    [HideInInspector]public GameObject chosedLimb;
 
     private Color randomColor;
 
+    public Ray ray;
     //----------------------------Références à l'UI'------------------------------------------------
 
     [SerializeField] private GameObject LeftSlot;
@@ -40,9 +41,13 @@ public class poserObjetSurCorps : MonoBehaviour
     private SlotScript downSS;
     [SerializeField] private GameObject CenterSlot;
     private CenterSlotScript centerSS;
-    
+    //----------------------------Variable pour le preview-----------------------------------------
+
+    PreviewMembre preview;
+
     void Start()
     {
+        preview = GetComponent<PreviewMembre>();
         if (afficherLesMembresAuStart)
         {
             if (Limbs.Count == 0)
@@ -139,17 +144,20 @@ public class poserObjetSurCorps : MonoBehaviour
         }
     }
     private void AddLimb() {
+        ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
+
         if (Input.GetButtonDown("AddLimb")) {
-            Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
+
+
             Debug.DrawRay(ray.origin, ray.direction * 50, Color.white);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50f))
+            if (Physics.Raycast(ray, out hit, 50f,layerMask: LayerMask.GetMask("BodyLayer", "BodyLimbLayer")))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
-                Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
+                //Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
         
-                if (hit.collider.attachedRigidbody.CompareTag("Player") || hit.collider.attachedRigidbody.CompareTag(this.limbTag))
+                if (hit.collider.attachedRigidbody.CompareTag("Player") || hit.collider.attachedRigidbody.CompareTag("membre"))
                 {
                     this.PutLimb(hit.point, hit.collider.attachedRigidbody.gameObject);
                 }
@@ -162,10 +170,11 @@ public class poserObjetSurCorps : MonoBehaviour
     private void RemoveLimb() {
         if (Input.GetButtonDown("RemoveLimb"))
         {
-                        
+            
+
             Ray ray = Camera.main.ScreenPointToRay(ControlCurseur.positionCurseur);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50f))
+            if (Physics.Raycast(ray, out hit, 50f,layerMask: LayerMask.GetMask("BodyLayer","BodyLimbLayer")))
             {
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
                 Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
@@ -181,7 +190,7 @@ public class poserObjetSurCorps : MonoBehaviour
 
     private void PutLimb(Vector3 pointChoose, GameObject membreParent)
     {
-        PointAttache pointAttacheParent = membreParent.GetComponent<PointAttache>();
+        PointAttache pointAttacheParent = GetPointAttach(membreParent);
         Transform transformChoose = FindNearestPoint(pointChoose, pointAttacheParent.listePointAttache);
         //creation du membre
         GameObject membreEnfant = Instantiate(this.chosedLimb, transformChoose);
@@ -196,10 +205,11 @@ public class poserObjetSurCorps : MonoBehaviour
         pointAttacheParent.SetEnfant(transformChoose, membreEnfant);
         //Control du membre
         GetComponent<ControlMembre>().AddMembre(scriptMembreEnfant, this.chosedGroupIndex);
-        scriptMembreEnfant.rbParent = membreParent.GetComponent<Rigidbody>();
+        //Set le rbParent (a été annulé car il est maintenant fais dans le script du point d'attache membreParent
+        //scriptMembreEnfant.rbParent = membreParent.GetComponent<Rigidbody>();
     }
 
-    Transform FindNearestPoint(Vector3 pointCompare, GameObject[] arrayTest)
+    public Transform FindNearestPoint(Vector3 pointCompare, GameObject[] arrayTest)
     {
         Transform nearestPoint = transform;
 
@@ -218,6 +228,22 @@ public class poserObjetSurCorps : MonoBehaviour
             }
         }
         return nearestPoint;
+    }
+
+    public PointAttache GetPointAttach(GameObject membreParent)
+    {
+        PointAttache pointAttacheParent;
+
+        if (membreParent.GetComponent<PointAttache>() == null)
+        {
+            pointAttacheParent = membreParent.GetComponentInParent<PointAttache>();
+        }
+        else
+        {
+            pointAttacheParent = membreParent.GetComponent<PointAttache>();
+        }
+
+        return pointAttacheParent;
     }
 
 }
