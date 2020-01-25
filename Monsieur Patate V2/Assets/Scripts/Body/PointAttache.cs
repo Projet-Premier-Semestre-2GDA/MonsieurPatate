@@ -107,6 +107,7 @@ public class PointAttache : MonoBehaviour
     public void SupprimerObjet(bool parentDejaPrevenu = false,ControlMembre controlMembre = null)
     {
         controlMembre = GameObject.FindGameObjectWithTag("Player").GetComponent<ControlMembre>();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Enlever Membre");
 
         if (!parentDejaPrevenu) //permet de se supprimer des parents si cela n'a pas deja ete fait
         {

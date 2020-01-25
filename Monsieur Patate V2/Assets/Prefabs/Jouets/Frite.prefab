@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 5565829816446441006}
   - component: {fileID: 5598466282483640170}
   - component: {fileID: 2705294495053787579}
+  - component: {fileID: 1294449220584152432}
   m_Layer: 0
   m_Name: Cylinder026
   m_TagString: Untagged
@@ -334,3 +335,15 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1294449220584152432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638071124690561816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91da434bd219daf458de8f009a384618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

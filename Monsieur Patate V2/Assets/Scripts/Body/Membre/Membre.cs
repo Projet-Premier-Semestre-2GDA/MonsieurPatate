@@ -34,7 +34,7 @@ public class Membre : MonoBehaviour
         {
             analogiqueReturn = 0;
         }
-        //FMODUnity.RuntimeManager.PlayOneShot(pathToSound);
+        FMODUnity.RuntimeManager.PlayOneShot(pathToSound);
     }
     public virtual void NonAction()
     {
