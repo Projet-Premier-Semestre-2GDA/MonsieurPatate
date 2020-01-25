@@ -11794,7 +11794,7 @@ PrefabInstance:
     - target: {fileID: 6721366356877742348, guid: 6d22486261ba60c4e88e810c1ed317cf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22486261ba60c4e88e810c1ed317cf, type: 3}
@@ -13251,6 +13251,9 @@ GameObject:
   - component: {fileID: 704312533}
   - component: {fileID: 704312532}
   - component: {fileID: 704312534}
+  - component: {fileID: 704312537}
+  - component: {fileID: 704312536}
+  - component: {fileID: 704312535}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13298,6 +13301,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFrameRate: 60
+--- !u!114 &704312535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704312531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfed2fc6776085a4f809402ca9c43369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personnage: {fileID: 2083176358}
+  pointDeTp:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+--- !u!114 &704312536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704312531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a2f39157154384795f4077c9e50b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &704312537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704312531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19de2829b497bc844842f6fbfe04903b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  differentOoska: []
+  tp: {fileID: 704312535}
+  myCamera: {fileID: 1201034894}
 --- !u!4 &707822205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 358089357529344230, guid: 2163086d08af8e44bb9e9ae62db582c1,
@@ -21392,6 +21442,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.58139807, y: 0.67467505, z: 0.7307143}
   m_Center: {x: -0.6805349, y: 1.7617228, z: 0.6899737}
+--- !u!114 &1201034894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903,
+    type: 3}
+  m_PrefabInstance: {fileID: 1286100153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44af8091779fcb40801d5b284353dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1206143736
 GameObject:
   m_ObjectHideFlags: 0
