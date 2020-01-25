@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlCurseur : MonoBehaviour
 {
-    [SerializeField] private float tempsPourParcourirEcran = 1.5f;
+    [SerializeField] private float vitesseDeplacement = 500;
     public static Vector2 positionCurseur;
     RectTransform curseur;
 
@@ -15,24 +15,22 @@ public class ControlCurseur : MonoBehaviour
         curseur = GetComponent<RectTransform>();
     }
     
-    private void LateUpdate()
-    {
-        if (Input.GetButtonDown("PauseButton"))
-        {
-            curseur.localPosition = new Vector3(0,0,0);
-        }
-    }
     void Update() {
         horizontalCursorInput = Input.GetAxis("HorizontalCursor");
         verticalCursorInput = Input.GetAxis("VerticalCursor");
 
-        float h = horizontalCursorInput * (GetComponentInParent<RectTransform>().rect.width / this.tempsPourParcourirEcran * 60);
-        float v = verticalCursorInput * (GetComponentInParent<RectTransform>().rect.height / this.tempsPourParcourirEcran * 60);
+        float h = horizontalCursorInput * this.vitesseDeplacement ;
+        float v = verticalCursorInput * this.vitesseDeplacement ;
         
         Vector2 cursorVelocity = new Vector2(h, v);
         
         curseur.Translate(cursorVelocity * Time.unscaledDeltaTime);
         positionCurseur = this.curseur.position;
+
+        if (Input.GetButtonDown("PauseButton"))
+        {
+            curseur.localPosition = new Vector3(0, 0, 0);
+        }
     }
 
     int InputArrondi(float x, float threeshold = 0.01f)

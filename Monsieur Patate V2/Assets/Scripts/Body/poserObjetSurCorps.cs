@@ -6,6 +6,9 @@ using UnityScript.Lang;
 
 public class poserObjetSurCorps : MonoBehaviour
 {
+    //---------------------------Les couleurs en fonction du groupe---------------------------
+    public Color[] groupeColor = new Color[4] { Color.blue, Color.red, Color.green, Color.magenta };
+
     //---------------------------Choix du groupe et des objet---------------------------
     public int chosedGroupIndex = 0;
     public int chosedLimbIndex = 0;
@@ -73,12 +76,13 @@ public class poserObjetSurCorps : MonoBehaviour
     void Update() {
         
         
-        //Sélection des membres et groupes
-        ChooseLimb();
-        ChooseGroup();
+        
 
         //--------------------------------------Ajout d'un membre ou suppression d'un membre--------------------------------------
         if (PauseScript.isGamePaused) {
+            //Sélection des membres et groupes
+            ChooseLimb();
+            ChooseGroup();
             AddLimb();
             RemoveLimb();
         }
@@ -147,7 +151,7 @@ public class poserObjetSurCorps : MonoBehaviour
         
                 if (hit.collider.attachedRigidbody.CompareTag("Player") || hit.collider.attachedRigidbody.CompareTag(this.limbTag))
                 {
-                    this.PutLimbOnBody(hit.point, hit.collider.attachedRigidbody.gameObject);
+                    this.PutLimb(hit.point, hit.collider.attachedRigidbody.gameObject);
                 }
             }
             
@@ -166,8 +170,7 @@ public class poserObjetSurCorps : MonoBehaviour
                 //Debug.DrawLine(ray.origin, hit.point,randomColor,5f);
                 Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
-                if (hit.collider.attachedRigidbody.tag == "membre")
-                {
+                if (hit.collider.attachedRigidbody.tag == "membre") {
                     hit.collider.attachedRigidbody.GetComponent<PointAttache>().SupprimerObjet();
         
                 }
@@ -176,7 +179,7 @@ public class poserObjetSurCorps : MonoBehaviour
         }
     }
 
-    private void PutLimbOnBody(Vector3 pointChoose, GameObject membreParent)
+    private void PutLimb(Vector3 pointChoose, GameObject membreParent)
     {
         PointAttache pointAttacheParent = membreParent.GetComponent<PointAttache>();
         Transform transformChoose = FindNearestPoint(pointChoose, pointAttacheParent.listePointAttache);
@@ -185,7 +188,7 @@ public class poserObjetSurCorps : MonoBehaviour
         //Assignation du groupe
         Membre scriptMembreEnfant = membreEnfant.GetComponent<Membre>();
         scriptMembreEnfant.groupeMembre = this.chosedGroupIndex;
-        
+        scriptMembreEnfant.SetMembreColor(groupeColor[this.chosedGroupIndex]);
         //Assignation des parents
         PointAttache pointAttacheObjet = membreEnfant.GetComponent<PointAttache>();
         pointAttacheObjet.parent = membreParent;
@@ -216,6 +219,5 @@ public class poserObjetSurCorps : MonoBehaviour
         }
         return nearestPoint;
     }
-
 
 }
