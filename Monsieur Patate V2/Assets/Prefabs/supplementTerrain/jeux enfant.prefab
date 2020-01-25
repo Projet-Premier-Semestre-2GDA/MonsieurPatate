@@ -839,6 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2786257567423173576}
   - component: {fileID: 3257170638874987135}
+  - component: {fileID: 3164011173439305327}
   m_Layer: 0
   m_Name: jeux enfant
   m_TagString: canJump
@@ -891,6 +892,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3164011173439305327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654016534846461212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45214bf7e535f84aaa1476c58cc84c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7102722459053370992
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\SoundDesignFmod\projet S1.fspro
+  sourceProjectPath: Assets/SoundDesignFmod/projet S1.fspro
   sourceBankPath: Assets\SoundDesignFmod\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
@@ -76,6 +76,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Master
   BanksToLoad: []
   LiveUpdatePort: 9264

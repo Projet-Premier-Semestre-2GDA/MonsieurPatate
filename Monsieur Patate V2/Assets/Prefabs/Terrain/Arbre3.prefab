@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 6230782823127103944}
   - component: {fileID: 6230782823127103946}
   - component: {fileID: 6230782823127103947}
+  - component: {fileID: 5889595470465020696}
   m_Layer: 0
   m_Name: Arbre
   m_TagString: Untagged
@@ -209,6 +210,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5889595470465020696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230782823127103945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45214bf7e535f84aaa1476c58cc84c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6230782823657225167
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,11 +423,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6230782823127103944}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c568b50f8b50e2e4e865d784f5d57a54,
-        type: 3}
-      propertyPath: m_Name
-      value: "Mod\xE8le"
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c568b50f8b50e2e4e865d784f5d57a54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -479,6 +487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 21540000
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c568b50f8b50e2e4e865d784f5d57a54,
+        type: 3}
+      propertyPath: m_Name
+      value: "Mod\xE8le"
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: c568b50f8b50e2e4e865d784f5d57a54,
         type: 3}
