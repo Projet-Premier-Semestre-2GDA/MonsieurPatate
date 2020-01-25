@@ -163,8 +163,8 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 1000
-    force: 1000
+    targetVelocity: 1500
+    force: 1500
     freeSpin: 0
   m_UseLimits: 0
   m_Limits:
@@ -261,7 +261,7 @@ MonoBehaviour:
   groupeMembre: -1
   rbParent: {fileID: 0}
   typeDeForceAppliquee: 2
-  puissance: 500
+  puissance: 1500
   applyForceToThisMembre: 1
   turnObject: {fileID: 2911928235507307565}
 --- !u!114 &7902360687464960174

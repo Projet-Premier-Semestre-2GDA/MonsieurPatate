@@ -5,7 +5,7 @@ using UnityEngine;
 public class MembreTournant : MembreAForce
 {
     public GameObject turnObject;
-    HingeJoint hinge;
+    HingeJoint hinge = new HingeJoint();
     Rigidbody rbOther;
     private bool turn = false;
 
@@ -21,7 +21,6 @@ public class MembreTournant : MembreAForce
         base.Action(analogiqueReturn);
         //turnObject.transform.Rotate(Vector3.forward * puissance, Space.Self);
         //TurnObject(turnObject);
-
         turn = true;
     }
     public override void NonAction()
