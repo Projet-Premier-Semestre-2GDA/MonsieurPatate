@@ -194,11 +194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44af8091779fcb40801d5b284353dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Target: {fileID: 0}
-  m_AutoTargetPlayer: 1
+  m_Target: {fileID: 8995801532925487423, guid: 6d22486261ba60c4e88e810c1ed317cf,
+    type: 3}
+  m_AutoTargetPlayer: 0
   m_UpdateType: 0
   m_MoveSpeed: 30
-  m_TurnSpeed: 1
+  m_TurnSpeed: 2.8
   m_TurnSmoothing: 5
   m_TiltMax: 45
   m_TiltMin: 45
