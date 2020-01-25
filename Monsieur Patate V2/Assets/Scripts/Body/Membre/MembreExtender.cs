@@ -6,7 +6,6 @@ public class MembreExtender : MembreAForce
 {
     public float marge = 0.01f;
     public GameObject movingPart;
-    public Transform Base;
     public Vector3 objectif = new Vector3(0,0.9f,0);
     public Vector3 beginPosition = new Vector3(0,0.21f,0);
     private bool firstMovementDone = false;
@@ -28,7 +27,6 @@ public class MembreExtender : MembreAForce
 
     private void FixedUpdate()
     {
-        //movingPart.transform.rotation = Base.rotation; 
         if (canGo)
         {
             if (doAction)
