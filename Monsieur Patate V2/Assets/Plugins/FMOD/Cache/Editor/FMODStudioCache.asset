@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: event:/MembreCollant
   guid: 1ee77d7e9c58d740bb824b4b606f500d
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/MembreRotatif
   guid: 21354d553cfaf6448f1e13ee54f88c80
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/SoundDesignFmod/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637155704213854125
+  lastModified: 637155721235614435
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3594812962617486288}
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   EditorEvents:
   - {fileID: 7267512300471446041}
   - {fileID: 5125124365665823362}
@@ -217,10 +217,10 @@ MonoBehaviour:
   - {fileID: 6317620257621593640}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   StringsBanks:
   - {fileID: -3594812962617486288}
-  stringsBankWriteTime: 637155704213854125
+  stringsBankWriteTime: 637155721235614435
   cacheVersion: 3
 --- !u!114 &179268555651728387
 MonoBehaviour:
@@ -257,7 +257,7 @@ MonoBehaviour:
   lastModified: 637155704213864097
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &1731213874870415920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
   Path: event:/Collision
   guid: e89d3d5352f84b4282a2ea8fa32c0ee6
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -299,6 +299,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
+--- !u!114 &2303201833866746727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637155721235604848
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3946608075940408646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +368,7 @@ MonoBehaviour:
   Path: event:/BoingFritte
   guid: d0928b916e25cf4d9565ea24dc49ec4c
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -391,7 +409,7 @@ MonoBehaviour:
   Path: event:/None
   guid: e8afacfd5aa4ac479a1064d15e467c27
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -432,7 +450,7 @@ MonoBehaviour:
   Path: event:/toboggan
   guid: 8efe36b861cb374997111b5b51413c28
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -473,7 +491,7 @@ MonoBehaviour:
   Path: event:/MembreExtend
   guid: 73df864c77f0784ca5f072cd2fb31c90
   Banks:
-  - {fileID: 1707167382031444252}
+  - {fileID: 2303201833866746727}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
