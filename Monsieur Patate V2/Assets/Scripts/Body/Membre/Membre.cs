@@ -2,7 +2,7 @@
 
 public class Membre : MonoBehaviour
 {
-    public string pathToSound = "event:/Membre/";
+    public string pathToSound = "event:/";
     // ceci est une nouvelle classe pour mes membre
     [HideInInspector]public int groupeMembre = -1;
     //public ForceMode typeDeForceAppliquee = ForceMode.Force;

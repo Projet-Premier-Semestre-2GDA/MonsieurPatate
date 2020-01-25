@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: event:/MembreCollant
   guid: 1ee77d7e9c58d740bb824b4b606f500d
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -41,6 +41,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3500
+--- !u!114 &-6791078684379436793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enlever Membre
+  m_EditorClassIdentifier: 
+  Path: event:/Enlever Membre
+  guid: 988c029c56360b478266f157e3ec47ac
+  Banks:
+  - {fileID: 1519516086241286745}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1262
 --- !u!114 &-5658570104581493838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,15 +79,15 @@ MonoBehaviour:
   Path: event:/MembreExtend
   guid: 73df864c77f0784ca5f072cd2fb31c90
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1500
---- !u!114 &-7217990950967083765
+  Length: 3500
+--- !u!114 &-4514680638259207308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,11 +101,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637155551305589199
+  lastModified: 637155640813763912
   LoadResult: 0
   FileSizes: []
-  Exists: 1
---- !u!114 &-6245408588293850212
+  Exists: 0
+--- !u!114 &-4295962319863140391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/fruit
+  m_EditorClassIdentifier: 
+  Path: event:/fruit
+  guid: 68a97afd0b31a24b92925616a1b10737
+  Banks:
+  - {fileID: 1519516086241286745}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-3594812962617486288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,11 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/SoundDesignFmod/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637155551305589199
+  lastModified: 637155653348491060
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 994
+    Value: 1186
   Exists: 1
 --- !u!114 &-4766511098265583248
 MonoBehaviour:
@@ -215,23 +261,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3594812962617486288}
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   EditorEvents:
-  - {fileID: 8415591039945100225}
-  - {fileID: 6341579696993552591}
-  - {fileID: -7493688063114194299}
-  - {fileID: 1621792011848558349}
-  - {fileID: -4766511098265583248}
-  - {fileID: 1863143460729231022}
-  - {fileID: 8425259531649436815}
+  - {fileID: 7267512300471446041}
+  - {fileID: 5125124365665823362}
+  - {fileID: 1940028458639713649}
+  - {fileID: -7640894016873503836}
+  - {fileID: -5658570104581493838}
+  - {fileID: 9180744348411256674}
+  - {fileID: 6317620257621593640}
+  - {fileID: -4295962319863140391}
+  - {fileID: -6791078684379436793}
+  - {fileID: 4922482777118483017}
+  - {fileID: 2988373122428058785}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   StringsBanks:
   - {fileID: -3594812962617486288}
-  stringsBankWriteTime: 637155551305589199
+  stringsBankWriteTime: 637155653348491060
   cacheVersion: 3
---- !u!114 &231998883941975104
+--- !u!114 &1519516086241286745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637155653348491060
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1731213874870415920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,8 +316,8 @@ MonoBehaviour:
   lastModified: 637155551305569257
   LoadResult: 0
   FileSizes: []
-  Exists: 1
---- !u!114 &1621792011848558349
+  Exists: 0
+--- !u!114 &1940028458639713649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,15 +332,79 @@ MonoBehaviour:
   Path: event:/toboggan
   guid: 8efe36b861cb374997111b5b51413c28
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7789
---- !u!114 &1863143460729231022
+  Length: 2500
+--- !u!114 &2988373122428058785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Nouvelles Frites
+  m_EditorClassIdentifier: 
+  Path: event:/Nouvelles Frites
+  guid: c54be84b7795364eabf8308c35acadb2
+  Banks:
+  - {fileID: 1519516086241286745}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 17000
+--- !u!114 &4922482777118483017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mettre Membre
+  m_EditorClassIdentifier: 
+  Path: event:/Mettre Membre
+  guid: c06a5f0253e16345977ceb321ae0bd6c
+  Banks:
+  - {fileID: 1519516086241286745}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 154
+--- !u!114 &4929883821927941821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/SoundDesignFmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637154150319084010
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5125124365665823362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,7 +419,7 @@ MonoBehaviour:
   Path: event:/Collision
   guid: e89d3d5352f84b4282a2ea8fa32c0ee6
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -310,7 +442,7 @@ MonoBehaviour:
   Path: event:/MembreRotatif
   guid: 21354d553cfaf6448f1e13ee54f88c80
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -351,7 +483,7 @@ MonoBehaviour:
   Path: event:/MembreCollant
   guid: 1ee77d7e9c58d740bb824b4b606f500d
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -392,7 +524,7 @@ MonoBehaviour:
   Path: event:/None
   guid: e8afacfd5aa4ac479a1064d15e467c27
   Banks:
-  - {fileID: 8987617367315490144}
+  - {fileID: 1519516086241286745}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

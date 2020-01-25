@@ -111,6 +111,8 @@ public class PointAttache : MonoBehaviour
         //et la c'est la vrai partie ou on se supprime avec tout ce qui rentre en compte
         controlMembre.RemoveMembre(this.gameObject.GetComponent<Membre>());
         Destroy(this.gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Enlever Membre");
+
     }
     public void SupprimerEnfant(GameObject enfant)
     {
