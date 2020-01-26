@@ -9,7 +9,7 @@ public class PointAttache : MonoBehaviour
     public GameObject[] objetCreer = new GameObject[6];
     public Rigidbody[] attachRigidBody = new Rigidbody[6];
     [HideInInspector]public GameObject parent;
-
+    ControlMembre controlMembre;
     public string tagPointAttache = "pointAttache";
 
     private void Start()
@@ -19,7 +19,8 @@ public class PointAttache : MonoBehaviour
             SearchAttachPoint();
         }
         name += Random.value;
-
+        //Debug.LogError("We find the  " + GameObject.FindGameObjectWithTag("Player"));
+        controlMembre = GameObject.FindGameObjectWithTag("Player").GetComponent<ControlMembre>();
         objetCreer = new GameObject[listePointAttache.Length];
     }
 
@@ -104,9 +105,9 @@ public class PointAttache : MonoBehaviour
             return true;
     }
 
-    public void SupprimerObjet(bool parentDejaPrevenu = false,ControlMembre controlMembre = null)
+    public void SupprimerObjet(bool parentDejaPrevenu = false/*, ControlMembre controlMembre = null*/)
     {
-        controlMembre = GameObject.FindGameObjectWithTag("Player").GetComponent<ControlMembre>();
+        
         FMODUnity.RuntimeManager.PlayOneShot("event:/Enlever Membre");
 
         if (!parentDejaPrevenu) //permet de se supprimer des parents si cela n'a pas deja ete fait
@@ -121,7 +122,9 @@ public class PointAttache : MonoBehaviour
             }
         }
         //et la c'est la vrai partie ou on se supprime avec tout ce qui rentre en compte
-        controlMembre.RemoveMembre(this.gameObject.GetComponent<Membre>());
+        Membre thisMemebre = this.gameObject.GetComponent<Membre>();
+        //Debug.LogError(controlMembre);
+        controlMembre.RemoveMembre(thisMemebre);
         Destroy(this.gameObject);
     }
     public void SupprimerEnfant(GameObject enfant)

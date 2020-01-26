@@ -180,7 +180,9 @@ public class poserObjetSurCorps : MonoBehaviour
                 Debug.Log(hit.collider.attachedRigidbody.tag); //fonctionne
                 //Debug.Log("L'objet c'est " + );
                 if (hit.collider.attachedRigidbody.tag == "membre") {
-                    hit.collider.attachedRigidbody.GetComponent<PointAttache>().SupprimerObjet();
+
+                    GetPointAttach(hit.collider.attachedRigidbody.gameObject).SupprimerObjet();
+                    //hit.collider.attachedRigidbody.GetComponent<PointAttache>().SupprimerObjet();
         
                 }
             }

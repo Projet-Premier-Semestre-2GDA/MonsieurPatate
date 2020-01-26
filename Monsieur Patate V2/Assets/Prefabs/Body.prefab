@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8243581896456161315}
   m_Layer: 8
   m_Name: point attache 7
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 8772878143133898447}
   m_Layer: 8
   m_Name: point attache 4
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 5711440579114046096}
   m_Layer: 8
   m_Name: point attache 21
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -836,8 +836,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2424609149745369368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.8028761, z: -0, w: -0.5961459}
+  m_LocalPosition: {x: 0.31, y: 2.8, z: 0.19}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 3843542779344944690}
@@ -992,82 +992,9 @@ MonoBehaviour:
   automaticSearch: 1
   listePointAttache:
   - {fileID: 6679979158428238639}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   objetCreer:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   attachRigidBody:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   parent: {fileID: 0}
   tagPointAttache: pointAttache
@@ -1159,7 +1086,7 @@ GameObject:
   - component: {fileID: 4727411218068731205}
   m_Layer: 8
   m_Name: point attache 23
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1231,7 +1158,7 @@ GameObject:
   - component: {fileID: 6667309981929328769}
   m_Layer: 8
   m_Name: point attache 12
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1519,7 +1446,7 @@ GameObject:
   - component: {fileID: 6828574370686846537}
   m_Layer: 8
   m_Name: point attache 3
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1693,7 +1620,7 @@ GameObject:
   - component: {fileID: 147383776164221125}
   m_Layer: 8
   m_Name: point attache 5
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1765,7 +1692,7 @@ GameObject:
   - component: {fileID: 9145032217874087161}
   m_Layer: 8
   m_Name: point attache 20
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,7 +1908,7 @@ GameObject:
   - component: {fileID: 966669468091671569}
   m_Layer: 8
   m_Name: point attache 18
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,7 +1980,7 @@ GameObject:
   - component: {fileID: 5909896877260621135}
   m_Layer: 8
   m_Name: point attache 17
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2197,7 +2124,7 @@ GameObject:
   - component: {fileID: 1675641266515184875}
   m_Layer: 8
   m_Name: point attache 14
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2419,7 +2346,7 @@ GameObject:
   - component: {fileID: 8101940350993551946}
   m_Layer: 8
   m_Name: point attache 2
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2491,7 +2418,7 @@ GameObject:
   - component: {fileID: 752356862655470039}
   m_Layer: 8
   m_Name: point attache 22
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2563,7 +2490,7 @@ GameObject:
   - component: {fileID: 3861729602160762712}
   m_Layer: 8
   m_Name: point attache 24
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2635,7 +2562,7 @@ GameObject:
   - component: {fileID: 4326549640523008364}
   m_Layer: 8
   m_Name: point attache 28
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2851,7 +2778,7 @@ GameObject:
   - component: {fileID: 5639622611871384341}
   m_Layer: 8
   m_Name: point attache 16
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3139,7 +3066,7 @@ GameObject:
   - component: {fileID: 8898832229249340980}
   m_Layer: 8
   m_Name: point attache 25
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3211,7 +3138,7 @@ GameObject:
   - component: {fileID: 4820435471198460020}
   m_Layer: 8
   m_Name: point attache 13
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3283,7 +3210,7 @@ GameObject:
   - component: {fileID: 8127694394943036823}
   m_Layer: 8
   m_Name: point attache 9
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3499,7 +3426,7 @@ GameObject:
   - component: {fileID: 1336195322256000691}
   m_Layer: 8
   m_Name: point attache 11
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3571,7 +3498,7 @@ GameObject:
   - component: {fileID: 4458103283190863980}
   m_Layer: 8
   m_Name: point attache 26
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3715,7 +3642,7 @@ GameObject:
   - component: {fileID: 1990649035214563163}
   m_Layer: 8
   m_Name: point attache 1
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4303,7 +4230,7 @@ GameObject:
   - component: {fileID: 8219621641220254171}
   m_Layer: 8
   m_Name: point attache 15
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4724,7 +4651,7 @@ GameObject:
   - component: {fileID: 538657812234566384}
   m_Layer: 8
   m_Name: point attache 19
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4868,7 +4795,7 @@ GameObject:
   - component: {fileID: 2967660529492355295}
   m_Layer: 8
   m_Name: point attache 8
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5084,7 +5011,7 @@ GameObject:
   - component: {fileID: 3819199439413543880}
   m_Layer: 8
   m_Name: point attache 10
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5522,7 +5449,7 @@ GameObject:
   - component: {fileID: 7305513027664681482}
   m_Layer: 8
   m_Name: point attache 27
-  m_TagString: Player
+  m_TagString: pointAttache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5587,6 +5514,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8995801532925487423}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_Name
+      value: paupiere (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5657,16 +5594,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.3919716
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_Name
-      value: paupiere (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5693,6 +5620,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8995801532925487423}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: a8be2d41c8911d1439dc37c516120003,
+        type: 3}
+      propertyPath: m_Name
+      value: bouche
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a8be2d41c8911d1439dc37c516120003,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5763,11 +5695,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.734551
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a8be2d41c8911d1439dc37c516120003,
-        type: 3}
-      propertyPath: m_Name
-      value: bouche
-      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: a8be2d41c8911d1439dc37c516120003,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5788,6 +5715,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8995801532925487423}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_Name
+      value: paupiere
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5857,21 +5799,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.3919716
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_Name
-      value: paupiere
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be15ac4c6614a3746b1cc7e0bc01d089,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: be15ac4c6614a3746b1cc7e0bc01d089,
         type: 3}

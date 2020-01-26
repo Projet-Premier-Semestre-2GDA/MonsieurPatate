@@ -6,6 +6,6 @@ public class Frite : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Nouvelles Frites");
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/Nouvelles Frites");
     }
 }
